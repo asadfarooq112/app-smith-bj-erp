@@ -1,0 +1,1 @@
+SELECT COUNT(*) from bj.inventory where code ilike '%{{Table1.searchText}}%';

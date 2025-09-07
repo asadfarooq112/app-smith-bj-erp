@@ -1,0 +1,15 @@
+
+INSERT INTO bj.attendance (employee_id) 
+SELECT e.employee_id 
+FROM bj.employees e 
+WHERE e.name = {{ Select_Employee.selectedOptionValue }}; 
+
+--EVENT TRACK 
+INSERT INTO bj.events (event, event_from, event_to, actor, payload)
+VALUES (
+  'db.insert',
+  'appsmith frontend',
+  'bj.attendance',
+  'employee',
+  {{Select_Employee.selectedOptionValue}}
+);
