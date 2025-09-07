@@ -20,6 +20,10 @@
     {
       "id": "Inventory",
       "isDefault": false
+    },
+    {
+      "id": "SKUs",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

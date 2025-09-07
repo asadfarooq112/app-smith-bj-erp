@@ -1,1 +1,0 @@
-UPDATE bj.inventory SET "date_added"= '{{Table1.updatedRow.date_added}}', "branch_id"= '{{Table1.updatedRow.branch_id}}', "code"= '{{Table1.updatedRow.code}}', "size"= '{{Table1.updatedRow.size}}', "metal_weight"= '{{Table1.updatedRow.metal_weight}}', "diamond_weight"= '{{Table1.updatedRow.diamond_weight}}' WHERE "inventory_id"= {{Table1.updatedRow.inventory_id}};

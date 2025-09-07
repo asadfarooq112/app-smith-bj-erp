@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_ff069769-8f89-479c-9360-25803c303241",
+  "gitSyncId": "68b6eff59289a93060f5089f_3ab8a692-822f-4757-ac60-1e7ddc46ef80",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 3490,
+          "bottomRow": 3090,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 810,
+          "minHeight": 1050,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 79,
+          "snapRows": 103,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "Inventory",
-    "slug": "inventory"
+    "name": "SKUs",
+    "slug": "skus"
   }
 }
