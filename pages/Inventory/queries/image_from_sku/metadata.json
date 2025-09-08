@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_56b3f7d0-b009-4523-9f7c-54f1c23a2b30",
-  "id": "Inventory_join_inventory_sku",
+  "gitSyncId": "68b6eff59289a93060f5089f_271d3352-3d5c-43af-a7fa-0ce4c57edf49",
+  "id": "Inventory_image_from_sku",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n\ti.inventory_id,\n  i.code,\n  i.size,\n  i.metal_weight,\n  i.diamond_weight,\n  s.image,\n  s.retail_price,\n  s.min_qty,\n  s.cost_price,\n  s.dia_qty,\n  s.metal_type,\n  s.category\nFROM bj.inventory AS i\nJOIN bj.sku       AS s\n  ON s.code = i.code\nWHERE i.branch_id = 'a758efa5-39c1-4a52-a27b-55b8cc979487'::uuid\nORDER BY i.code, i.size;\n",
+      "body": "SELECT image \nFROM bj.sku s\nwhere s.code = {{code_select_add.selectedOptionValue}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,12 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "join_inventory_sku",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "image_from_sku",
     "pageId": "Inventory",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

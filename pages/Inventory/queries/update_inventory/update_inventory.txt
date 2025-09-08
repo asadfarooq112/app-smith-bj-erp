@@ -1,0 +1,6 @@
+UPDATE bj.inventory
+SET 
+  size = {{input_edit_size.text}},
+  metal_weight = {{input_edit_metal_w.text}},
+  diamond_weight = {{input_edit_diamond_w.text}}
+WHERE inventory_id = {{Table1.triggeredRow.inventory_id}};

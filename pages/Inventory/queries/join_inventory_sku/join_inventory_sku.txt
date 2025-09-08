@@ -1,4 +1,5 @@
 SELECT
+	i.inventory_id,
   i.code,
   i.size,
   i.metal_weight,
