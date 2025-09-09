@@ -24,6 +24,10 @@
     {
       "id": "SKUs",
       "isDefault": false
+    },
+    {
+      "id": "Customers",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
