@@ -28,6 +28,10 @@
     {
       "id": "Customers",
       "isDefault": false
+    },
+    {
+      "id": "New Sale",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

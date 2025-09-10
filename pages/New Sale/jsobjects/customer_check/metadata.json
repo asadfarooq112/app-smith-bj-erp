@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_eb6a3989-1af7-47db-9a65-72224893313a",
+  "id": "New Sale_customer_check",
+  "unpublishedCollection": {
+    "name": "customer_check",
+    "pageId": "New Sale",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
