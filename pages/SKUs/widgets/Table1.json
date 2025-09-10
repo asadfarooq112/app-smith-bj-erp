@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 309,
+  "bottomRow": 315,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -42,17 +42,18 @@
     "dia_qty",
     "metal_type",
     "cost_price",
-    "min_qty"
+    "min_qty",
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1757282498254,
+  "columnUpdatedAt": 1757494885533,
   "columnWidthMap": {
     "category": 105,
     "code": 133,
-    "cost_price": 113,
+    "cost_price": 103,
     "dia_qty": 135,
     "image": 159,
-    "metal_type": 156,
-    "min_qty": 89,
+    "metal_type": 144,
+    "min_qty": 93,
     "retail_price": 134
   },
   "customIsLoading": false,
@@ -108,6 +109,15 @@
     },
     {
       "key": "primaryColumns.cost_price.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -115,7 +125,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -237,6 +251,46 @@
       "originalId": "cost_price",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Edit",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "SECONDARY",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "edit",
+      "id": "customColumn1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Edit",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{showModal(sku_edit_modal.name);}}",
+      "originalId": "customColumn1",
+      "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
@@ -521,9 +575,9 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{Query1.data}}",
+  "tableData": "{{sku.data}}",
   "textSize": "0.875rem",
-  "topRow": 1,
+  "topRow": 7,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

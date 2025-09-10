@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_9db5a84a-6d08-4abf-954c-c906f6f68cb0",
-  "id": "Home_Attendance_INSERT",
+  "gitSyncId": "68b6eff59289a93060f5089f_a509a3bd-a44c-4bda-9331-3f072adb6bb4",
+  "id": "SKUs_sku",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "\nINSERT INTO bj.attendance (employee_id) \nSELECT e.employee_id \nFROM bj.employees e \nWHERE e.name = {{ Select_Employee.selectedOptionValue }}; \n\n",
+      "body": "SELECT * FROM bj.sku;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "Attendance_INSERT",
-    "pageId": "Home",
-    "runBehaviour": "MANUAL",
+    "dynamicBindingPathList": [],
+    "name": "sku",
+    "pageId": "SKUs",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

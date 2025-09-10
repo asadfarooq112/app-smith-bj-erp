@@ -1,1 +1,0 @@
-SELECT COUNT(*) from bj.sku where code ilike '%{{Table1.searchText}}%';

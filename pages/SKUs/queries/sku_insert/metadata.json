@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_8a581a58-cb78-4b8a-98f4-61d6b3633daf",
-  "id": "Home_Total_record_bj_sku1",
+  "gitSyncId": "68b6eff59289a93060f5089f_751d8dba-eecd-49fa-b73f-a8f619580aff",
+  "id": "SKUs_sku_insert",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) from bj.sku where code ilike '%{{Table1.searchText}}%';",
+      "body": "INSERT INTO bj.sku (code, image, retail_price, min_qty, dia_qty, metal_type, category, cost_price)\nVALUES (\n\t{{newSku_code.text}}, \n\t{{newSku_img.text}}, \n\t{{newSku_retail.text}},\n\t{{newSku_minQty.text}},\n\t{{newSku_Dqty.text}},\n\t{{newSku_metalType.selectedOptionValue}},\n\t{{newSku_category.selectedOptionValue}},\n\t{{newSku_cost.text}}\n\t);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "Total_record_bj_sku1",
-    "pageId": "Home",
+    "name": "sku_insert",
+    "pageId": "SKUs",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

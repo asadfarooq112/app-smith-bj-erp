@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{Attendance_INSERT.run().then(() => {\n  showAlert(Select_Employee.selectedOptionValue + ' Attendance Marked!', 'success');\n  closeModal('');\n}).catch(() => {\n  showAlert('Error, Attendance NOT MARKED. Try Again or Contact Support!', 'error');\n});}}",
+  "onClick": "{{homeObj.attendanceInsert();}}",
   "originalBottomRow": 13,
   "originalTopRow": 9,
   "parentId": "vvns9d9sl8",

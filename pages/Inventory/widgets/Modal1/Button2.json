@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{insert_new_inventory.run().then(() => {\n  join_inventory_sku.run().then(() => {\n    showAlert('Product Added');\n  });\n  closeModal(Modal1.name);\n});}}",
+  "onClick": "{{JSObject1.insertInventory();}}",
   "parentId": "3ks7qfi8nz",
   "placement": "CENTER",
   "recaptchaType": "V3",

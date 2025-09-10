@@ -1,0 +1,11 @@
+INSERT INTO bj.sku (code, image, retail_price, min_qty, dia_qty, metal_type, category, cost_price)
+VALUES (
+	{{newSku_code.text}}, 
+	{{newSku_img.text}}, 
+	{{newSku_retail.text}},
+	{{newSku_minQty.text}},
+	{{newSku_Dqty.text}},
+	{{newSku_metalType.selectedOptionValue}},
+	{{newSku_category.selectedOptionValue}},
+	{{newSku_cost.text}}
+	);

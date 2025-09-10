@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_435c504a-b61e-4c54-8078-3220cf163561",
-  "id": "Home_Select_bj_sku1",
+  "gitSyncId": "68b6eff59289a93060f5089f_5467265c-34c1-4af4-b815-d409f7141075",
+  "id": "SKUs_event_insert",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  *\nFROM\n  bj.sku\nWHERE\n  \"code\" ilike '%{{Table1.searchText}}%'\nORDER BY\n  \"{{Table1.sortOrder.column || 'sku_id'}}\" {{Table1.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}\nLIMIT\n  {{Table1.pageSize}}\nOFFSET\n  {{Table1.pageOffset}}",
+      "body": "INSERT INTO bj.events (event, event_from, event_to, actor, payload)\nVALUES (\n  {{this.params.event}},\n  {{this.params.event_from}},\n  {{this.params.event_to}},\n  {{this.params.actor}},\n  {{this.params.payload}}\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "Select_bj_sku1",
-    "pageId": "Home",
+    "name": "event_insert",
+    "pageId": "SKUs",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

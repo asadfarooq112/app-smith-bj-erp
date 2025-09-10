@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_9db5a84a-6d08-4abf-954c-c906f6f68cb0",
-  "id": "Home_Attendance_INSERT",
+  "gitSyncId": "68b6eff59289a93060f5089f_17b8e781-704f-4ccd-9942-4daa096d4c24",
+  "id": "Inventory_event_insert",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "\nINSERT INTO bj.attendance (employee_id) \nSELECT e.employee_id \nFROM bj.employees e \nWHERE e.name = {{ Select_Employee.selectedOptionValue }}; \n\n",
+      "body": "INSERT INTO bj.events (event, event_from, event_to, actor, payload)\nVALUES (\n  {{this.params.event}},\n  {{this.params.event_from}},\n  {{this.params.event_to}},\n  {{this.params.actor}},\n  {{this.params.payload}}\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "Attendance_INSERT",
-    "pageId": "Home",
+    "name": "event_insert",
+    "pageId": "Inventory",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
