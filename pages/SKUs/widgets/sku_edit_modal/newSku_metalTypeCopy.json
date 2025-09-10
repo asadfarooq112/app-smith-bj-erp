@@ -4,13 +4,19 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 23,
   "boxShadow": "none",
-  "defaultOptionValue": "",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Table1.triggeredRow.metal_type))(newSku_metalTypeCopy.options, newSku_metalTypeCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -50,7 +56,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 43,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"18K Gold\",\n    \"code\": \"18K Gold\"\n  },\n\t{\n    \"name\": \"Palladium\",\n    \"code\": \"Palladium\"\n  },\n\t{\n    \"name\": \"14K Gold\",\n    \"code\": \"14K Gold\"\n  },\n\t{\n    \"name\": \"9K Gold\",\n    \"code\": \"9K Gold\"\n  },\n\t{\n    \"name\": \"18KW Gold\",\n    \"code\": \"18KW Gold\"\n  },\n\t{\n    \"name\": \"21K Gold\",\n    \"code\": \"21K Gold\"\n  },\n\t{\n    \"name\": \"18KW White Gold\",\n    \"code\": \"18KW White Gold\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"name\": \"{{Table1.triggeredRow.metal_type}}\",\n    \"code\": \"{{Table1.triggeredRow.metal_type}}\"\n  }\n]",
   "topRow": 16,
   "type": "SELECT_WIDGET",
   "version": 1,

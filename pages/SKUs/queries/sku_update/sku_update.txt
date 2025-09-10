@@ -1,0 +1,10 @@
+UPDATE bj.sku
+SET 
+			image = {{newSku_imgCopy.text}}, 
+			retail_price = {{newSku_retailCopy.text}},
+			min_qty = {{newSku_minQtyCopy.text}},
+			dia_qty = {{newSku_DqtyCopy.text}},
+			metal_type = {{newSku_metalTypeCopy.selectedOptionValue}},
+			category = {{newSku_categoryCopy.selectedOptionValue}},
+			cost_price = {{newSku_costCopy.text}}
+WHERE sku_id = {{Table1.triggeredRow.sku_id}};

@@ -4,13 +4,16 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 23,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Table1.triggeredRow.metal_type))(newSku_categoryCopy.options, newSku_categoryCopy.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Table1.triggeredRow.category))(newSku_categoryCopy.options, newSku_categoryCopy.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     },
     {
       "key": "defaultOptionValue"
@@ -53,7 +56,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 21,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Ladies Ring\",\n    \"code\": \"Ladies Ring\"\n  },\n  {\n    \"name\": \"Gents Ring\",\n    \"code\": \"Gents Ring\"\n  },\n  {\n    \"name\": \"Pendant\",\n    \"code\": \"Pendant\"\n  },\n  {\n    \"name\": \"Ear Rings\",\n    \"code\": \"Ear Rings\"\n  },\n  {\n    \"name\": \"Nose Pin\",\n    \"code\": \"Nose Pin\"\n  },\n  {\n    \"name\": \"Chain\",\n    \"code\": \"Chain\"\n  },\n  {\n    \"name\": \"Bracelet\",\n    \"code\": \"Bracelet\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"name\": {{Table1.triggeredRow.category}},\n    \"code\": \"{{Table1.triggeredRow.category}}\"\n  }\n]",
   "topRow": 16,
   "type": "SELECT_WIDGET",
   "version": 1,
