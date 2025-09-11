@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "7ku7e2pdvz",
-  "leftColumn": 26,
+  "leftColumn": 19,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -39,15 +39,15 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 26,
   "shouldTruncate": false,
-  "text": "{{currentItem.diamond_weight}}",
+  "text": "{{currentItem.metal_type}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 2,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "hl9nsas2oo",
-  "widgetName": "Text4Copy2"
+  "widgetId": "sbhf34ke84",
+  "widgetName": "list_metal_type"
 }

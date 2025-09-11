@@ -44,16 +44,16 @@
     "customColumn1",
     "metal_type"
   ],
-  "columnUpdatedAt": 1757586964349,
+  "columnUpdatedAt": 1757597976834,
   "columnWidthMap": {
     "category": 115,
     "code": 100,
     "cost_price": 93,
-    "dia_qty": 75,
-    "diamond_weight": 112,
+    "dia_qty": 96,
+    "diamond_weight": 113,
     "image": 98,
-    "metal_weight": 129,
-    "retail_price": 112,
+    "metal_weight": 117,
+    "retail_price": 155,
     "size": 66
   },
   "customIsLoading": false,
@@ -99,9 +99,6 @@
       "key": "primaryColumns.retail_price.computedValue"
     },
     {
-      "key": "primaryColumns.dia_qty.computedValue"
-    },
-    {
       "key": "primaryColumns.category.computedValue"
     },
     {
@@ -115,6 +112,9 @@
     },
     {
       "key": "primaryColumns.metal_type.computedValue"
+    },
+    {
+      "key": "primaryColumns.dia_qty.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -283,7 +283,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "D.Qty",
+      "label": "Dia.Qty",
       "notation": "standard",
       "originalId": "dia_qty",
       "sticky": "",

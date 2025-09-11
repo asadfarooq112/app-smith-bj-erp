@@ -6,8 +6,8 @@ SELECT
   i.diamond_weight,
   s.image,
   s.retail_price,
-  s.dia_qty,
 	s.metal_type,
+	s.dia_qty,
   s.category
 FROM bj.inventory AS i
 JOIN bj.sku       AS s

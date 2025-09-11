@@ -24,7 +24,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "7ku7e2pdvz",
-  "leftColumn": 11,
+  "leftColumn": 32,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -39,15 +39,15 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 19,
+  "rightColumn": 37,
   "shouldTruncate": false,
-  "text": "{{currentItem.category}}",
+  "text": "{{currentItem.diamond_quantity}}",
   "textAlign": "CENTER",
   "textColor": "#231F20",
   "topRow": 2,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mw9ap319wh",
-  "widgetName": "Text4Copy"
+  "widgetId": "e92u9g2cj1",
+  "widgetName": "list_dia_qty"
 }
