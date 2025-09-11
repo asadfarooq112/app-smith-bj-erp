@@ -4,6 +4,7 @@ export default {
     storeValue('products', []);
   },
 	
+//////////////////////////////
 	pushInArray () {
 	
 		
@@ -18,7 +19,8 @@ export default {
 			metal_weight: Table_inventory.triggeredRow.metal_weight,
 			diamond_weight: Table_inventory.triggeredRow.diamond_weight,
 			diamond_quantity: Table_inventory.triggeredRow.dia_qty,
-			retail_price: Table_inventory.triggeredRow.retail_price
+			retail_price: Table_inventory.triggeredRow.retail_price,
+			offered_price: Table_inventory.triggeredRow.retail_price
 		};
 		
 		const exists = products.some(obj => obj.inventory_id === newProduct.inventory_id);
@@ -40,6 +42,8 @@ export default {
 		}
 	},
 	
+//////////////////////////////
+	
 	deleteFromArray () {
 
 		let products = appsmith.store.products;
@@ -49,6 +53,27 @@ export default {
 		storeValue("products", updatedProducts);
 		
 	},
+	
+//////////////////////////////
+
+	updateOfferedPrice () {
+		
+		let products = appsmith.store.products;
+		
+		// Try to use the syntax ->>>>  condition ? if return : else return   as much as you can its simple
+		
+		const updatedProducts = products.map(p =>
+      p.inventory_id === List1.triggeredItem.inventory_id ? { ...p, offered_price: new_offered_price.text } : p
+    );
+
+		
+		storeValue("products", updatedProducts);
+		console.log(updatedProducts);
+		closeModal(modal_offered_price.name);
+		new_offered_price.setValue("");
+		
+},
+	
 	
 	
 	async myFun2 () {
