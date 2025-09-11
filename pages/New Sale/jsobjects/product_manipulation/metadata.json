@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_c006a8da-e7f5-4fdd-ac8a-d52e47d57548",
+  "id": "New Sale_product_manipulation",
+  "unpublishedCollection": {
+    "name": "product_manipulation",
+    "pageId": "New Sale",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

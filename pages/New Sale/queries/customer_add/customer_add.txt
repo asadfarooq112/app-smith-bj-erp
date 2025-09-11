@@ -1,0 +1,6 @@
+INSERT INTO bj.customer (name, phone, address)
+VALUES (
+{{cust_name.text}},
+{{cust_phone.text}},
+{{cust_address.text}}
+)

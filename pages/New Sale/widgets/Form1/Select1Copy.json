@@ -1,0 +1,65 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9,
+  "boxShadow": "none",
+  "defaultOptionValue": "LHR",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "optionLabel"
+    },
+    {
+      "key": "optionValue"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "rj8nnzrrom",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Invoice Loc.",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 13,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 59,
+  "mobileLeftColumn": 19,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 52,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "loc",
+  "parentColumnSpace": 16.6875,
+  "parentId": "g26vdibfz4",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 23,
+  "serverSideFiltering": false,
+  "sourceData": "[\n{\n\"name\": \"LHR\",\n\"loc\": \"LHR\"\n},\n{\n\"name\": \"BJ\",\n\"loc\": \"BJ\"\n},\n{\n\"name\": \"PK\",\n\"loc\": \"PK\"\n}\n]",
+  "topRow": 2,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "j2au7pyop0",
+  "widgetName": "Select1Copy"
+}
