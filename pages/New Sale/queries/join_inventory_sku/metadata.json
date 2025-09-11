@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n\ti.inventory_id,\n  i.code,\n  i.size,\n  i.metal_weight,\n  i.diamond_weight,\n  s.image,\n  s.retail_price,\n  s.cost_price,\n  s.dia_qty,\n  s.metal_type,\n  s.category\nFROM bj.inventory AS i\nJOIN bj.sku       AS s\n  ON s.code = i.code\nWHERE i.branch_id = 'a758efa5-39c1-4a52-a27b-55b8cc979487'::uuid\nORDER BY i.code, i.size;\n",
+      "body": "SELECT\n\ti.inventory_id,\n  i.code,\n  i.size,\n  i.metal_weight,\n  i.diamond_weight,\n  s.image,\n  s.retail_price,\n  s.dia_qty,\n\ts.metal_type,\n  s.category\nFROM bj.inventory AS i\nJOIN bj.sku       AS s\n  ON s.code = i.code\nWHERE i.branch_id = 'a758efa5-39c1-4a52-a27b-55b8cc979487'::uuid\nORDER BY i.code, i.size;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

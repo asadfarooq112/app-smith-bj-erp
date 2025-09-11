@@ -80,6 +80,9 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "listData"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -94,7 +97,7 @@
   "itemSpacing": 8,
   "key": "wfxcwqe1tn",
   "leftColumn": 1,
-  "listData": "[\n  {\n    \"id\": \"001\",\n    \"name\": \"Blue\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"002\",\n    \"name\": \"Green\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"003\",\n    \"name\": \"Red\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"004\",\n    \"name\": \"Green\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"005\",\n    \"name\": \"Red\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"006\",\n    \"name\": \"Green\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"007\",\n    \"name\": \"Red\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"008\",\n    \"name\": \"Green\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"id\": \"009\",\n    \"name\": \"Red\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  }\n]",
+  "listData": "{{appsmith.store.products}}",
   "mainCanvasId": "i5qecdei60",
   "mainContainerId": "qjuyrkqc9x",
   "minWidth": 450,
@@ -109,7 +112,7 @@
   "parentColumnSpace": 15.853515625,
   "parentId": "g26vdibfz4",
   "parentRowSpace": 10,
-  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"metal_weight\"] )}}",
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",

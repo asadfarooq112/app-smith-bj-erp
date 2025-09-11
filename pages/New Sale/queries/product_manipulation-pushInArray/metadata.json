@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68b6eff59289a93060f5089f_ff2968bc-5574-4dfa-afe0-11c1e6beac94",
-  "id": "New Sale_product_manipulation.myFun1",
+  "id": "New Sale_product_manipulation.pushInArray",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -23,8 +23,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "product_manipulation.myFun1",
-    "name": "myFun1",
+    "fullyQualifiedName": "product_manipulation.pushInArray",
+    "name": "pushInArray",
     "pageId": "New Sale",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
