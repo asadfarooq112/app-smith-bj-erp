@@ -6,8 +6,19 @@ export default {
 		const products = appsmith.store.products;
 		const offered_price = Number(total_offered_price.text);
 		
-		await sale_add.run({sale_id: sale_id});
+		Promise.all([
+			
+		await sale_add.run({sale_id: sale_id}),	
 		
+		//sale db event	
+		await event_insert.run({
+					event: 'db.insert', 
+					event_from: 'appsmith sales frontend', 
+					event_to: 'bj.sales', 
+					actor: `${Select1.selectedOptionValue}`, 
+					payload: `sale_id: ${sale_id}`
+})
+		]);
 		
 		
 		

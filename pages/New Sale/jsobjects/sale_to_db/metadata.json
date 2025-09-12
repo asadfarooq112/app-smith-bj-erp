@@ -1,8 +1,8 @@
 {
   "gitSyncId": "68b6eff59289a93060f5089f_9a60212f-a7f5-4cef-94ef-059f511823e1",
-  "id": "New Sale_JSObject1",
+  "id": "New Sale_sale_to_db",
   "unpublishedCollection": {
-    "name": "JSObject1",
+    "name": "sale_to_db",
     "pageId": "New Sale",
     "pluginId": "js-plugin",
     "pluginType": "JS",

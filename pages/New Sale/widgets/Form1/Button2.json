@@ -31,7 +31,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.saleToDB();}}",
+  "onClick": "{{sale_to_db.saleToDB();}}",
   "originalBottomRow": 135,
   "originalTopRow": 131,
   "parentId": "g26vdibfz4",
