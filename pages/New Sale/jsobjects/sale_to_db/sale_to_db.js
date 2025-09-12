@@ -8,6 +8,7 @@ export default {
 		
 		Promise.all([
 			
+		//add sale in db	
 		await sale_add.run({sale_id: sale_id}),	
 		
 		//sale db event	
@@ -17,10 +18,26 @@ export default {
 					event_to: 'bj.sales', 
 					actor: `${Select1.selectedOptionValue}`, 
 					payload: `sale_id: ${sale_id}`
-})
+}),
+		
+				//sale biz event	
+		await event_insert.run({
+					event: 'business.sale_insert', 
+					event_from: 'appsmith sales frontend', 
+					event_to: 'bj.sales', 
+					actor: `${Select1.selectedOptionValue}`, 
+					payload: `sale_id: ${sale_id}`
+}),
+					// add financial transaction
+		await financial_transaction_insert.run({type: 'sale', type_id: sale_id, amount: Number(total_paid.text)})
+			
 		]);
 		
+	
 		
+		
+		
+		//////////////////////////////////////////////////
 		
 		for (const item of products) {
 			
@@ -38,10 +55,20 @@ export default {
 					event_to: 'bj.sale_items', 
 					actor: `${Select1.selectedOptionValue}`, 
 					payload: `sale_id: ${sale_id}, inventory_id:${item.inventory_id}, code: ${item.code}`
+				}),
+			
+			//Remove that product from inventory
+			await remove_inventory.run({inventory_id: item.inventory_id}),
+			
+						
+				//db event for inventory remove
+				await event_insert.run({
+					event: 'db.remove', 
+					event_from: 'appsmith sales frontend', 
+					event_to: 'bj.inventory', 
+					actor: `${Select1.selectedOptionValue}`, 
+					payload: `inventory_id:${item.inventory_id}, code: ${item.code}`
 				})
-			
-			
-			
 			
 			
 			

@@ -1,3 +1,0 @@
-SELECT employee_id
-FROM bj.employees
-WHERE employee_name = {{Selec1 }};

@@ -1,0 +1,2 @@
+DELETE FROM bj.inventory
+WHERE inventory_id = {{this.params.inventory_id}};

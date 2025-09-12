@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_345f86aa-e210-42b7-8b96-9d4a0efea8ea",
-  "id": "New Sale_get_employee_id",
+  "gitSyncId": "68b6eff59289a93060f5089f_8ec5150d-4d32-43a4-ba01-94349954b9aa",
+  "id": "New Sale_financial_transaction_insert",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT employee_id\nFROM bj.employees\nWHERE employee_name = {{Selec1 }};\n",
+      "body": "INSERT INTO bj.financial_transactions (type, type_id, amount)\nVALUES (\n{{this.params.type}},\n{{this.params.type_id}},\n{{this.params.amount}}\n)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "get_employee_id",
+    "name": "financial_transaction_insert",
     "pageId": "New Sale",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
