@@ -1,11 +1,11 @@
 {
   "gitSyncId": "68b6eff59289a93060f5089f_9b2d5114-3d62-4050-a3fd-8e6535f26239",
-  "id": "New Sale_remove_inventory",
+  "id": "New Sale_sell_inventory",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM bj.inventory\nWHERE inventory_id = {{this.params.inventory_id}};\n",
+      "body": "UPDATE bj.inventory\nSET is_sold = true\nWHERE inventory_id = {{this.params.inventory_id}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "remove_inventory",
+    "name": "sell_inventory",
     "pageId": "New Sale",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

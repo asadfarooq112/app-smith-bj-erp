@@ -58,7 +58,7 @@ export default {
 				}),
 			
 			//Remove that product from inventory
-			await remove_inventory.run({inventory_id: item.inventory_id}),
+			await sell_inventory.run({inventory_id: item.inventory_id}),
 			
 						
 				//db event for inventory remove

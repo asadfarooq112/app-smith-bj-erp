@@ -1,1 +1,1 @@
-SELECT * FROM bj.inventory;
+SELECT * FROM bj.inventory WHERE is_sold = false;

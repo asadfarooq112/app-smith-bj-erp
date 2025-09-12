@@ -31,7 +31,7 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Inventory', {}, 'NEW_WINDOW');}}",
+  "onClick": "{{navigateTo('Inventory', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 12.3125,
   "parentId": "0",
   "parentRowSpace": 10,
