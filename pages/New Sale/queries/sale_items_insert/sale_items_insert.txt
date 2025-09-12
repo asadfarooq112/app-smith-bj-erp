@@ -1,0 +1,2 @@
+INSERT INTO bj.sale_items (sale_id, inventory_id, offered_price)
+VALUES ({{this.params.sale_id}}, {{this.params.inventory_id}}, {{this.params.offered_price}})

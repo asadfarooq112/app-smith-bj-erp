@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 89,
+  "bottomRow": 104,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,42 +11,45 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "o9qjq5etk5",
-  "leftColumn": 49,
+  "leftColumn": 9,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 76,
-  "mobileLeftColumn": 29,
-  "mobileRightColumn": 45,
-  "mobileTopRow": 72,
+  "mobileBottomRow": 96,
+  "mobileLeftColumn": 9,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 92,
   "needsErrorInfo": false,
-  "originalBottomRow": 89,
-  "originalTopRow": 85,
+  "originalBottomRow": 104,
+  "originalTopRow": 100,
   "overflow": "NONE",
   "parentColumnSpace": 16.375,
   "parentId": "g26vdibfz4",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 59,
+  "rightColumn": 17,
   "shouldTruncate": false,
-  "text": "Total Offered Price",
-  "textAlign": "CENTER",
+  "text": "{{Number(input_bank_transfer.text)+Number(input_card.text)+Number(input_cash.text)+Number(input_cod.text)}}",
+  "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 85,
+  "topRow": 100,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "o8ji153azt",
-  "widgetName": "Text8Copy"
+  "widgetId": "nnbni0v7il",
+  "widgetName": "total_paid"
 }

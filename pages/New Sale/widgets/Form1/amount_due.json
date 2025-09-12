@@ -33,6 +33,8 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 92,
   "needsErrorInfo": false,
+  "originalBottomRow": 96,
+  "originalTopRow": 92,
   "overflow": "NONE",
   "parentColumnSpace": 16.375,
   "parentId": "g26vdibfz4",
@@ -49,5 +51,5 @@
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "02worqf3ef",
-  "widgetName": "Text10"
+  "widgetName": "amount_due"
 }

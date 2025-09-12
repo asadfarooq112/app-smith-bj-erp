@@ -4,6 +4,10 @@ export default {
 		storeValue('products', []);
 	},
 
+	saleUUID: () => {
+	const saleuuid = crypto.randomUUID();
+		storeValue('sale_uuid', saleuuid);
+	},
 
 	//////////////////////////////
 	pushInArray () {

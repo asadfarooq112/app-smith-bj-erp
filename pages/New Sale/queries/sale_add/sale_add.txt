@@ -1,0 +1,31 @@
+INSERT INTO bj.sales (
+	sale_id, 
+	branch_id, 
+	employee_id, 
+	customer_id, 
+	total_retail_price,
+total_charged,
+total_paid,
+bank,
+card,
+cod,
+cash,
+amount_due,
+invoice_loc
+)
+
+VALUES (
+{{this.params.sale_id}},
+	'a758efa5-39c1-4a52-a27b-55b8cc979487',
+(SELECT employee_id FROM bj.employees WHERE name = {{Select1.selectedOptionValue}} LIMIT 1),
+	{{Table1.selectedRow.customer_id}},
+	{{total_retail.text}},
+	{{total_offered_price.text}},
+	{{total_paid.text}},
+	{{input_bank_transfer.text}},
+				{{input_card.text}},
+				{{input_cod.text}},
+				{{input_cash.text}},
+				{{amount_due.text}},
+				{{Select1Copy.selectedOptionValue}}
+)
