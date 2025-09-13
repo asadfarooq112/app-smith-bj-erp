@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_57b7480f-2386-4fef-a9e0-521ab39e537a",
-  "id": "New Sale_Api1",
+  "gitSyncId": "68b6eff59289a93060f5089f_df3486ee-4997-451e-8067-19cbbe2abc6c",
+  "id": "Home_Api1",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"date\": {{ moment().format(\"DD MMM YYYY\") }},\n  \"loc\": {{Select1Copy.selectedOptionLabel}},\n  \"employee\": {{Select1.selectedOptionLabel}},\n  \"cust_name\": {{Table1.selectedRow.name}},\n  \"cust_phone\": {{Table1.selectedRow.phone}},\n  \"cust_address\": {{Table1.selectedRow.address}},\n  \"products\": {{appsmith.store.products}},\n  \"total_retail\": {{total_retail.text}},\n  \"total_discount\": {{discount.text}},\n  \"total_offered\": {{total_offered_price.text}},\n  \"paid\": {{total_paid.text}},\n  \"due\": {{amount_due.text}},\n  \"bank\": {{input_bank_transfer.text}},\n  \"card\": {{input_card.text}},\n  \"cash\": {{input_cash.text}},\n  \"cod\": {{input_cod.text}}\n}\n",
+      "body": "{\n  \"date\": \"date\",\n  \"loc\": \"loc\",\n  \"employee\": \"employee\",\n  \"cust_name\": \"cust_name\",\n  \"cust_phone\": \"cust_phone\",\n  \"cust_address\": \"cust_address\",\n  \"products\": [\n    {\n      \"code\": \"code1\",\n      \"image\": \"image1\",\n      \"category\": \"category\",\n      \"metal\": \"metal\",\n      \"diamond_weight\": \"dw\",\n      \"diamond_qty\": \"dQty\",\n      \"total_weight\": \"tw\",\n      \"retail\": \"retail\",\n      \"discount\": \"disc.\",\n      \"offered\": \"offered\"\n    }\n  ],\n  \"total_retail\": \"total_retail\",\n  \"total_discount\": \"total_discount\",\n  \"total_offered\": \"total_offered\",\n  \"paid\": \"paid\",\n  \"due\": \"due\",\n  \"bank\": \"bank\",\n  \"card\": \"card\",\n  \"cash\": \"cash\",\n  \"cod\": \"cod\"\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -39,13 +39,9 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "Api1",
-    "pageId": "New Sale",
+    "pageId": "Home",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

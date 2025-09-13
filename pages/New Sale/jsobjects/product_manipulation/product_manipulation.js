@@ -25,7 +25,8 @@ export default {
 			diamond_weight: Table_inventory.triggeredRow.diamond_weight,
 			diamond_quantity: Table_inventory.triggeredRow.dia_qty,
 			retail_price: Table_inventory.triggeredRow.retail_price,
-			offered_price: Table_inventory.triggeredRow.retail_price
+			offered_price: Table_inventory.triggeredRow.retail_price,
+			product_discount: 0
 		};
 
 		const exists = products.some(obj => obj.inventory_id === newProduct.inventory_id);
@@ -68,7 +69,7 @@ export default {
 		// Try to use the syntax ->>>>  condition ? if return : else return   as much as you can its simple
 
 		const updatedProducts = products.map(p =>
-																				 p.inventory_id === List1.triggeredItem.inventory_id ? { ...p, offered_price: new_offered_price.text } : p
+																				 p.inventory_id === List1.triggeredItem.inventory_id ? { ...p, offered_price: new_offered_price.text, product_discount: Number(p.retail_price) - Number(new_offered_price.text) } : p
 																				);
 
 

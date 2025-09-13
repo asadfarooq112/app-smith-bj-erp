@@ -1,0 +1,31 @@
+{
+  "date": "date",
+  "loc": "loc",
+  "employee": "employee",
+  "cust_name": "cust_name",
+  "cust_phone": "cust_phone",
+  "cust_address": "cust_address",
+  "products": [
+    {
+      "code": "code1",
+      "image": "image1",
+      "category": "category",
+      "metal": "metal",
+      "diamond_weight": "dw",
+      "diamond_qty": "dQty",
+      "total_weight": "tw",
+      "retail": "retail",
+      "discount": "disc.",
+      "offered": "offered"
+    }
+  ],
+  "total_retail": "total_retail",
+  "total_discount": "total_discount",
+  "total_offered": "total_offered",
+  "paid": "paid",
+  "due": "due",
+  "bank": "bank",
+  "card": "card",
+  "cash": "cash",
+  "cod": "cod"
+}

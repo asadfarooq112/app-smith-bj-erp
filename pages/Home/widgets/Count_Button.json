@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 6,
   "boxShadow": "none",
   "buttonColor": "#71717a",
   "buttonVariant": "PRIMARY",
@@ -39,7 +39,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "Counting",
-  "topRow": 0,
+  "topRow": 1,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "6a2brxkrpq",

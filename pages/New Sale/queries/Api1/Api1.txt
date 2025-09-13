@@ -1,0 +1,18 @@
+{
+  "date": {{ moment().format("DD MMM YYYY") }},
+  "loc": {{Select1Copy.selectedOptionLabel}},
+  "employee": {{Select1.selectedOptionLabel}},
+  "cust_name": {{Table1.selectedRow.name}},
+  "cust_phone": {{Table1.selectedRow.phone}},
+  "cust_address": {{Table1.selectedRow.address}},
+  "products": {{appsmith.store.products}},
+  "total_retail": {{total_retail.text}},
+  "total_discount": {{discount.text}},
+  "total_offered": {{total_offered_price.text}},
+  "paid": {{total_paid.text}},
+  "due": {{amount_due.text}},
+  "bank": {{input_bank_transfer.text}},
+  "card": {{input_card.text}},
+  "cash": {{input_cash.text}},
+  "cod": {{input_cod.text}}
+}
