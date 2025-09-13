@@ -1,0 +1,3 @@
+UPDATE bj.followup
+SET done = TRUE
+WHERE followup_id = {{Table2.triggeredRow.followup_id}};

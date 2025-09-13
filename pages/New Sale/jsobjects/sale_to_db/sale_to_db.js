@@ -5,6 +5,7 @@ export default {
 		const sale_id = appsmith.store.sale_uuid;
 		const products = appsmith.store.products;
 		const offered_price = Number(total_offered_price.text);
+		const employeeActor = Select1.selectedOptionValue;
 		
 		Promise.all([
 			
@@ -16,7 +17,7 @@ export default {
 					event: 'db.insert', 
 					event_from: 'appsmith sales frontend', 
 					event_to: 'bj.sales', 
-					actor: `${Select1.selectedOptionValue}`, 
+					actor: employeeActor, 
 					payload: `sale_id: ${sale_id}`
 }),
 		
@@ -25,7 +26,7 @@ export default {
 					event: 'business.sale_insert', 
 					event_from: 'appsmith sales frontend', 
 					event_to: 'bj.sales', 
-					actor: `${Select1.selectedOptionValue}`, 
+					actor: employeeActor, 
 					payload: `sale_id: ${sale_id}`
 }),
 					// add financial transaction
@@ -53,7 +54,7 @@ export default {
 					event: 'db.insert', 
 					event_from: 'appsmith sales frontend', 
 					event_to: 'bj.sale_items', 
-					actor: `${Select1.selectedOptionValue}`, 
+					actor: employeeActor, 
 					payload: `sale_id: ${sale_id}, inventory_id:${item.inventory_id}, code: ${item.code}`
 				}),
 			
@@ -66,7 +67,7 @@ export default {
 					event: 'db.remove', 
 					event_from: 'appsmith sales frontend', 
 					event_to: 'bj.inventory', 
-					actor: `${Select1.selectedOptionValue}`, 
+					actor: employeeActor, 
 					payload: `inventory_id:${item.inventory_id}, code: ${item.code}`
 				})
 			
