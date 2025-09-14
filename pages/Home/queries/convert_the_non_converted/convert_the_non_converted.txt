@@ -1,0 +1,6 @@
+UPDATE bj.nonconverted
+SET 
+    converted = true,
+    later_converted_by = {{Select2.selectedOptionValue}},
+    later_converted_at = NOW()
+WHERE id = {{Table3.triggeredRow.id}};

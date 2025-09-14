@@ -1,0 +1,9 @@
+INSERT INTO bj.nonconverted (employee_id, name, phone, objection_reason, objection_resolution)
+VALUES (
+{{Select1.selectedOptionValue}},
+	{{Input1.text}},
+	{{Input1Copy.text}},
+	{{Input2.text}},
+	{{Input2Copy.text}}
+
+)

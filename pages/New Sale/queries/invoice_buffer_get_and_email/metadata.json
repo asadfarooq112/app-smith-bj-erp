@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68b6eff59289a93060f5089f_57b7480f-2386-4fef-a9e0-521ab39e537a",
-  "id": "New Sale_Api1",
+  "id": "New Sale_invoice_buffer_get_and_email",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -44,7 +44,7 @@
         "key": "body"
       }
     ],
-    "name": "Api1",
+    "name": "invoice_buffer_get_and_email",
     "pageId": "New Sale",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

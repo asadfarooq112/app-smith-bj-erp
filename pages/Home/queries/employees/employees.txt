@@ -1,0 +1,1 @@
+SELECT employee_id, name FROM bj.employees;

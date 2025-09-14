@@ -1,0 +1,13 @@
+SELECT 
+    nc.id,
+    nc.employee_id,
+    e.name AS employee_name,
+    nc.objection_reason,
+    nc.objection_resolution,
+    nc.name,
+    nc.phone,
+    nc.created_at
+FROM bj.nonconverted nc
+LEFT JOIN bj.employees e 
+       ON nc.employee_id = e.employee_id
+WHERE nc.converted = false
