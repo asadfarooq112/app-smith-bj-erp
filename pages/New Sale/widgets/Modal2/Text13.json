@@ -1,8 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
-  "disableLink": false,
+  "bottomRow": 19,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -12,16 +11,13 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
   "key": "ihvdyrygt7",
@@ -29,28 +25,28 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 13,
-  "mobileLeftColumn": 11,
-  "mobileRightColumn": 27,
-  "mobileTopRow": 9,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 14,
   "needsErrorInfo": false,
   "originalBottomRow": 21,
-  "originalTopRow": 15,
+  "originalTopRow": 13,
   "overflow": "NONE",
-  "parentColumnSpace": 6.9375,
+  "parentColumnSpace": 10.09375,
   "parentId": "zi6jlkxx2l",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 51,
+  "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "<a href =\"http://178.156.165.247:8080{{invoice_buffer_get_and_email.data.url_path}}\" target=\"_blank\" rel=\"noopener noreferrer\"> http://178.156.165.247:8080{{invoice_buffer_get_and_email.data.url_path}} </a>",
+  "text": "Note: You have access to download the invoices from last two days.\n\nTo download just visit:    http://178.156.165.247:8080/tmp/invoice-INVOICENUMBER\n",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 7,
+  "topRow": 13,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "4uux4psnl9",
-  "widgetName": "Text12"
+  "widgetId": "wm6ws8c4r2",
+  "widgetName": "Text13"
 }

@@ -46,7 +46,7 @@
     ],
     "name": "invoice_buffer_get_and_email",
     "pageId": "New Sale",
-    "runBehaviour": "AUTOMATIC",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
