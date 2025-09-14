@@ -32,7 +32,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "",
+  "onClick": "{{invoice_download.invoiceDowload();}}",
   "originalBottomRow": 134,
   "originalTopRow": 130,
   "parentId": "g26vdibfz4",
