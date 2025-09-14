@@ -5,12 +5,9 @@ export default {
 		await invoice_buffer_get_and_email.run();
 		const url = `http://178.156.165.247:8080${invoice_buffer_get_and_email.data.url_path}`;
 		
-		const fileName = url.split('tmp/')[1]; // Extract the filename from the URL
-		
 		console.log(url);
 		
-    // Trigger the download
-    await download(url, fileName);
+    showModal(Modal2.name);
 		
 	}
 }

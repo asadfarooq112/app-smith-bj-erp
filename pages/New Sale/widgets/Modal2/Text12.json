@@ -44,7 +44,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 61,
   "shouldTruncate": false,
-  "text": "http://178.156.165.247:8080/{{invoice_buffer_get_and_email.data.url_path}}",
+  "text": "http://178.156.165.247:8080{{invoice_buffer_get_and_email.data.url_path}}",
   "textAlign": "LEFT",
   "textColor": "#003dc5",
   "topRow": 9,
