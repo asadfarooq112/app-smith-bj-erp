@@ -47,7 +47,7 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
-  "onOptionChange": "{{image_from_sku.run()}}",
+  "onOptionChange": "{{image_from_sku_add.run()}}",
   "optionLabel": "label",
   "optionValue": "value",
   "originalBottomRow": 14,

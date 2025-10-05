@@ -21,7 +21,7 @@
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/belgian/invoice",
+      "path": "/belgian/refund-invoice",
       "pluginSpecifiedTemplates": [
         {
           "value": true

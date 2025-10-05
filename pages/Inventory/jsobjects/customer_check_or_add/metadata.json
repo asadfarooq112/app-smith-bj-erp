@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_b7fb836f-f1b9-4a2d-94ff-caa9d27c3e5c",
+  "id": "Inventory_customer_check_or_add",
+  "unpublishedCollection": {
+    "name": "customer_check_or_add",
+    "pageId": "Inventory",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

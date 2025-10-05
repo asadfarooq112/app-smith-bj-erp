@@ -57,6 +57,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 300,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +75,7 @@
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClose": "{{navigateTo('Home', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,

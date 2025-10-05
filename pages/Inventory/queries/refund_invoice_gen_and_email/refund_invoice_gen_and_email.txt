@@ -1,0 +1,16 @@
+{
+  "date": {{ moment().format("DD MMM YYYY") }},
+  "employee": {{Select_Employee.selectedOptionValue}},
+  "cust_name": {{Table1Copy.selectedRow.name}},
+  "cust_phone": {{Table1Copy.selectedRow.phone}},
+  "cust_address": {{Table1Copy.selectedRow.address}},
+	"invoice_type" : {{Select2.selectedOptionValue}}, 
+  "image": {{Image1Copy1.image}},
+	"code" : {{return_code_select.selectedOptionValue}},
+	"diamond_weight" : {{return_diamond_weight.text}},
+	"metal_weight" : {{return_metal_weight.text}},
+	"adjustment_method" : {{Select1.selectedOptionValue}},
+	"customer_paid" : {{customer_paid.text}},
+	"deduction_percent" : {{Select1Copy.selectedOptionValue}},
+	"amount_refunded" : {{amount_refunded.text}}
+}

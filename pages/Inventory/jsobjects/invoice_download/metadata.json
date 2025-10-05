@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_21af67a5-b7c5-4023-950a-3c57d9127b15",
+  "id": "Inventory_invoice_download",
+  "unpublishedCollection": {
+    "name": "invoice_download",
+    "pageId": "Inventory",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

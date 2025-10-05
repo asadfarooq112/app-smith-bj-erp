@@ -1,8 +1,8 @@
 {
   "gitSyncId": "68b6eff59289a93060f5089f_549a6265-64dd-45b5-af8e-858a1d0c9918",
-  "id": "Inventory_JSObject1",
+  "id": "Inventory_inventory_manipulation",
   "unpublishedCollection": {
-    "name": "JSObject1",
+    "name": "inventory_manipulation",
     "pageId": "Inventory",
     "pluginId": "js-plugin",
     "pluginType": "JS",

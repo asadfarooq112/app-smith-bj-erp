@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 11,
+  "disableLink": false,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,13 +12,16 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
-  "fontStyle": "",
+  "fontSize": "1.25rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "ihvdyrygt7",
@@ -25,28 +29,28 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 18,
-  "mobileLeftColumn": 4,
-  "mobileRightColumn": 20,
-  "mobileTopRow": 14,
+  "mobileBottomRow": 13,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 27,
+  "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "originalBottomRow": 19,
-  "originalTopRow": 13,
+  "originalBottomRow": 21,
+  "originalTopRow": 15,
   "overflow": "NONE",
-  "parentColumnSpace": 10.09375,
-  "parentId": "zi6jlkxx2l",
+  "parentColumnSpace": 6.9375,
+  "parentId": "gsa37eg3i7",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 60,
+  "rightColumn": 51,
   "shouldTruncate": false,
-  "text": "Note: You have access to download the invoices from last two days.\n\nTo download just visit:    http://178.156.165.247:8080/tmp/invoice-INVOICENUMBER.pdf\n",
+  "text": "<a href =\"http://178.156.165.247:8080{{refund_invoice_gen_and_email.data.url_path}}\" target=\"_blank\" rel=\"noopener noreferrer\"> http://178.156.165.247:8080{{refund_invoice_gen_and_email.data.url_path}} </a>",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 13,
+  "topRow": 7,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "wm6ws8c4r2",
-  "widgetName": "Text13"
+  "widgetId": "4bie35f34l",
+  "widgetName": "Text12"
 }

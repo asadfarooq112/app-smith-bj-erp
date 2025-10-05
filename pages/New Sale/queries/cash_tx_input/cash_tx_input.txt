@@ -1,0 +1,2 @@
+INSERT INTO bj.cash_transactions (transaction_value, source)
+VALUES ({{this.params.cash_tx_value}}, {{this.params.source}});

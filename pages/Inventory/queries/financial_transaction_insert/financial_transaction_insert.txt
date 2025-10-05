@@ -1,0 +1,6 @@
+INSERT INTO bj.financial_transactions (type, type_id, amount)
+VALUES (
+{{this.params.type}},
+{{this.params.type_id}},
+{{this.params.amount}}
+)

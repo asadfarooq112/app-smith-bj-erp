@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_d8c0efcb-28c7-4b9a-a3a4-24674cb7414c",
+  "id": "Inventory_return_exhange",
+  "unpublishedCollection": {
+    "name": "return_exhange",
+    "pageId": "Inventory",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

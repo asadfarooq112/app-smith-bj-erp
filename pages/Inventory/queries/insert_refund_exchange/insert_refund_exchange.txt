@@ -1,0 +1,13 @@
+INSERT INTO bj.return_exchange (return_id, inventory_id, customer_id, type, employee, refund_from, customer_paid, deduction_percent, amount_refunded, refund_comment )
+VALUES (
+{{this.params.returnuuid}},
+{{this.params.inventoryuuid}},
+{{Table1Copy.selectedRow.customer_id}},
+{{Select2.selectedOptionValue}},
+{{Select_Employee.selectedOptionValue}},
+{{Select1.selectedOptionValue}},
+{{customer_paid.text}},
+{{Select1Copy.selectedOptionValue}},
+{{amount_refunded.text}},
+{{Input4.text}}
+);
