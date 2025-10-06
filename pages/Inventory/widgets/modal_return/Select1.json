@@ -4,7 +4,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 53,
   "boxShadow": "none",
-  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Select2.selectedOptionValue == \"Exchange\" ? \"Adjusted\"\n  : \"\"))(Select1.options, Select1.serverSideFiltering) }}",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( Select2.selectedOptionValue == \"exchange\" ? \"Adjusted\"\n  : \"\"))(Select1.options, Select1.serverSideFiltering) }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -56,7 +56,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 27,
   "serverSideFiltering": false,
-  "sourceData": "{{Select2.selectedOptionValue == \"Refund\" ? [ {\n    \"name\": \"Cash\",\n    \"code\": \"Cash\"\n  },\n  {\n    \"name\": \"Bank\",\n    \"code\": \"Bank\"\n  }] : [  {\n    \"name\": \"Adjusted\",\n    \"code\": \"Adjusted\"\n  }]}}",
+  "sourceData": "{{Select2.selectedOptionValue == \"refund\" ? [ {\n    \"name\": \"Cash\",\n    \"code\": \"Cash\"\n  },\n  {\n    \"name\": \"Bank\",\n    \"code\": \"Bank\"\n  }] : [  {\n    \"name\": \"Adjusted\",\n    \"code\": \"Adjusted\"\n  }]}}",
   "topRow": 46,
   "type": "SELECT_WIDGET",
   "version": 1,

@@ -11,7 +11,8 @@ card,
 cod,
 cash,
 amount_due,
-invoice_loc
+invoice_loc,
+exchange_adjustment
 )
 
 VALUES (
@@ -27,5 +28,6 @@ VALUES (
 				{{input_cod.text}},
 				{{input_cash.text}},
 				{{amount_due.text}},
-				{{Select1Copy.selectedOptionValue}}
+				{{Select1Copy.selectedOptionValue}},
+				{{input_exchange_adjustment.text}}
 )

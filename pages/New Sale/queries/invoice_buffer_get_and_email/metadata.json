@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"date\": {{ moment().format(\"DD MMM YYYY\") }},\n  \"loc\": {{Select1Copy.selectedOptionLabel}},\n  \"employee\": {{Select1.selectedOptionLabel}},\n  \"cust_name\": {{Table1.selectedRow.name}},\n  \"cust_phone\": {{Table1.selectedRow.phone}},\n  \"cust_address\": {{Table1.selectedRow.address}},\n  \"products\": {{appsmith.store.products}},\n  \"total_retail\": {{total_retail.text}},\n  \"total_discount\": {{discount.text}},\n  \"total_offered\": {{total_offered_price.text}},\n  \"paid\": {{total_paid.text}},\n  \"due\": {{amount_due.text}},\n  \"bank\": {{input_bank_transfer.text}},\n  \"card\": {{input_card.text}},\n  \"cash\": {{input_cash.text}},\n  \"cod\": {{input_cod.text}}\n}\n",
+      "body": "{\n  \"date\": {{ moment().format(\"DD MMM YYYY\") }},\n  \"loc\": {{Select1Copy.selectedOptionLabel}},\n  \"employee\": {{Select1.selectedOptionLabel}},\n  \"cust_name\": {{Table1.selectedRow.name}},\n  \"cust_phone\": {{Table1.selectedRow.phone}},\n  \"cust_address\": {{Table1.selectedRow.address}},\n  \"products\": {{appsmith.store.products}},\n  \"total_retail\": {{total_retail.text}},\n  \"total_discount\": {{discount.text}},\n  \"total_offered\": {{total_offered_price.text}},\n  \"paid\": {{total_paid.text}},\n  \"due\": {{amount_due.text}},\n  \"bank\": {{input_bank_transfer.text}},\n  \"card\": {{input_card.text}},\n  \"cash\": {{input_cash.text}},\n  \"cod\": {{input_cod.text}},\n\t\"exchange_adjustment\" : {{input_exchange_adjustment.text}}\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

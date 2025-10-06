@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_30fdeb60-7c1a-4c48-b846-1e469735e9c4",
-  "id": "Home_sale",
+  "gitSyncId": "68b6eff59289a93060f5089f_0baa4a57-0bff-442e-a4b6-45bb6c68ff4e",
+  "id": "Finances_financial_transactions",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM bj.sales;",
+      "body": "SELECT * FROM bj.financial_transactions;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "sale",
-    "pageId": "Home",
-    "runBehaviour": "MANUAL",
+    "name": "financial_transactions",
+    "pageId": "Finances",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

@@ -50,7 +50,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 27,
   "serverSideFiltering": false,
-  "sourceData": "[\n  {\n    \"name\": \"Refund\",\n    \"code\": \"Refund\"\n  },\n  {\n    \"name\": \"Exchange\",\n    \"code\": \"Exchange\"\n  }\n]",
+  "sourceData": "[\n  {\n    \"name\": \"refund\",\n    \"code\": \"refund\"\n  },\n  {\n    \"name\": \"exchange\",\n    \"code\": \"exchange\"\n  }\n]",
   "topRow": 38,
   "type": "SELECT_WIDGET",
   "version": 1,

@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 30,
+  "bottomRow": 549,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 300,
+      "bottomRow": 500,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -25,11 +25,11 @@
       "isDisabled": false,
       "isLoading": false,
       "isVisible": true,
-      "key": "6wgwlgg4v7",
+      "key": "qnat3ske7i",
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 240,
+      "minHeight": 500,
       "minWidth": 450,
       "mobileBottomRow": 0,
       "mobileLeftColumn": 0,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "49ubjnxqtx",
+      "parentId": "m87qha01m1",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "gsa37eg3i7",
-      "widgetName": "Canvas7"
+      "widgetId": "1luqx97lz1",
+      "widgetName": "Canvas5Copy"
     }
   ],
   "detachFromLayout": true,
@@ -57,35 +57,28 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClose"
-    }
-  ],
-  "height": 300,
+  "height": 500,
   "isCanvas": true,
   "isLoading": false,
-  "key": "obps6qfd85",
+  "key": "m9ul5emlxx",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 300,
   "mobileBottomRow": 0,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClose": "{{navigateTo('Inventory', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,
   "renderMode": "CANVAS",
   "rightColumn": 0,
   "shouldScrollContents": true,
-  "topRow": 357,
+  "topRow": 49,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "49ubjnxqtx",
-  "widgetName": "Modal2",
-  "width": 658
+  "widgetId": "m87qha01m1",
+  "widgetName": "Modal4_for_followups",
+  "width": 506
 }

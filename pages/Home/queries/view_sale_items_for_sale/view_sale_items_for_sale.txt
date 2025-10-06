@@ -1,0 +1,11 @@
+SELECT
+  si.offered_price,
+  i.code,
+  i.size
+FROM
+  bj.sale_items AS si
+JOIN
+  bj.inventory AS i
+  ON si.inventory_id = i.inventory_id
+WHERE
+  si.sale_id = {{Table1.triggeredRow.sale_id}};

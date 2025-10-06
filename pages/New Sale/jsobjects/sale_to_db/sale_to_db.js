@@ -38,7 +38,7 @@ export default {
 		if(input_cash.text) {
 
 		await cash_tx_input.run({cash_tx_value: Number(input_cash.text), source: 'sale'})
-		}
+		} 
 		
 		
 		//////////////////////////////////////////////////

@@ -14,5 +14,6 @@
   "bank": {{input_bank_transfer.text}},
   "card": {{input_card.text}},
   "cash": {{input_cash.text}},
-  "cod": {{input_cod.text}}
+  "cod": {{input_cod.text}},
+	"exchange_adjustment" : {{input_exchange_adjustment.text}}
 }

@@ -1,0 +1,2 @@
+SELECT SUM(transaction_value)
+FROM bj.cash_transactions;

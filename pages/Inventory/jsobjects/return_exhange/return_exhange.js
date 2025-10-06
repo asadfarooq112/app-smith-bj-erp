@@ -39,14 +39,17 @@ export default {
 				event_to: 'bj.return_exchange', 
 				actor: `Employee ${Select_Employee.selectedOptionValue}`, 
 				payload: payload_data
-			})
+			}),
+			
+			
+			//financial transactiom
+			financial_transaction_insert.run({type: `${Select2.selectedOptionValue}`, type_id: returnuuid, amount: Number(amount_refunded.text)*-1 })
 				
 			]);
 			
-			if (Select2.selectedOptionValue == "Refund") {
 
-			await financial_transaction_insert.run({type: 'refund', type_id: returnuuid, amount: Number(amount_refunded.text)*-1 });
-				
+
+				//cash tx
 			if (Select1.selectedOptionValue == "Cash") {
 	
 				await cash_tx_input.run({cash_tx_value: Number(amount_refunded.text)*-1, source: 'refund'})
@@ -54,8 +57,7 @@ export default {
 			}
 			
 
-}
-			
+
 
 		}
 		catch (e) {

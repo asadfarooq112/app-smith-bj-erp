@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_30fdeb60-7c1a-4c48-b846-1e469735e9c4",
-  "id": "Home_sale",
+  "gitSyncId": "68b6eff59289a93060f5089f_b3922285-3718-4fda-9c7e-deb005bfd697",
+  "id": "Home_Query2",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM bj.sales;",
+      "body": "SELECT * FROM bj.\"attendance\" LIMIT 10;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,7 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "sale",
+    "name": "Query2",
     "pageId": "Home",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

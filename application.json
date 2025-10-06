@@ -32,6 +32,10 @@
     {
       "id": "New Sale",
       "isDefault": false
+    },
+    {
+      "id": "Finances",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
