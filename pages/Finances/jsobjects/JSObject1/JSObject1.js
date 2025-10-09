@@ -46,6 +46,9 @@ export default {
 				
 			];
 			
+			if (Select1.selectedOptionValue == 'cash') {
+			await cash_tx_input.run({cash_tx_value: Number(amountIN.text), source: 'capital_in'})
+			};
 			
 			closeModal(Modal1.name);
 			showAlert(`Added ${amountIN.text} as Capital In`);
@@ -71,14 +74,14 @@ console.log (e)
 		
 		try {
 					
-		if (Input1.text == '381000') {
+		if (Input1Copy.text == '381000') {
 			
 		const capital_out_id = crypto.randomUUID();
 			
 			await Promise.all [
 				
 				
-				capital_out_insert.run({capital_in_id: capital_out_id}),
+				capital_out_insert.run({capital_out_id: capital_out_id}),
 				financial_transaction_insert.run({type: 'capital_out', type_id: capital_out_id, amount: Number(amountCopy.text)}),
 				
 				//db event
@@ -112,6 +115,10 @@ console.log (e)
 				
 				
 			];
+			
+						if (Select1Copy.selectedOptionValue == 'cash') {
+			await cash_tx_input.run({cash_tx_value: Number(amountCopy.text)*-1, source: 'capital_out'})
+			};
 			
 			closeModal(Modal1Copy.name);
 			showAlert(`Added ${amountCopy.text} as Capital Out`);
