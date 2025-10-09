@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_0baa4a57-0bff-442e-a4b6-45bb6c68ff4e",
-  "id": "Finances_financial_transactions",
+  "gitSyncId": "68b6eff59289a93060f5089f_0b17573b-a613-41d5-a46a-5b1bd80f5742",
+  "id": "Finances_employeesCopy",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM bj.financial_transactions\nORDER BY date_added DESC",
+      "body": "SELECT name FROM bj.employees;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "financial_transactions",
+    "name": "employeesCopy",
     "pageId": "Finances",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

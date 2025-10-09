@@ -1,1 +1,2 @@
-SELECT * FROM bj.financial_transactions;
+SELECT * FROM bj.financial_transactions
+ORDER BY date_added DESC

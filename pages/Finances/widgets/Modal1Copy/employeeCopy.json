@@ -1,57 +1,62 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 129,
+  "bottomRow": 13,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "inputType": "NUMBER",
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "xv4djn99wq",
-  "label": "Exchange Adjustment",
+  "key": "wivh7yw78b",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
+  "labelText": "Employee",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 109,
-  "mobileLeftColumn": 18,
-  "mobileRightColumn": 38,
-  "mobileTopRow": 102,
+  "mobileBottomRow": 13,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "originalBottomRow": 129,
-  "originalTopRow": 122,
-  "parentColumnSpace": 16.375,
-  "parentId": "g26vdibfz4",
+  "optionLabel": "name",
+  "optionValue": "name",
+  "parentColumnSpace": 6.9375,
+  "parentId": "o1536knxpu",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 10,
-  "shouldAllowAutofill": false,
-  "showStepArrows": false,
-  "topRow": 122,
-  "type": "INPUT_WIDGET_V2",
-  "version": 2,
-  "widgetId": "4gmts81sh1",
-  "widgetName": "input_exchange_adjustment"
+  "rightColumn": 20,
+  "serverSideFiltering": false,
+  "sourceData": "{{employeesCopy.data}}",
+  "topRow": 6,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "qrtag4rw5o",
+  "widgetName": "employeeCopy"
 }

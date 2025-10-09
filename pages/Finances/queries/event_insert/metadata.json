@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_0baa4a57-0bff-442e-a4b6-45bb6c68ff4e",
-  "id": "Finances_financial_transactions",
+  "gitSyncId": "68b6eff59289a93060f5089f_2fce752b-0f9a-461b-a567-318d487072af",
+  "id": "Finances_event_insert",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM bj.financial_transactions\nORDER BY date_added DESC",
+      "body": "INSERT INTO bj.events (event, event_from, event_to, actor, payload)\nVALUES (\n  {{this.params.event}},\n  {{this.params.event_from}},\n  {{this.params.event_to}},\n  {{this.params.actor}},\n  {{this.params.payload}}\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,10 +22,14 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "financial_transactions",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "event_insert",
     "pageId": "Finances",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -1,0 +1,7 @@
+INSERT INTO bj.capital_in (employee_id, amount, method, capital_in_id)
+VALUES (
+	(SELECT employee_id FROM bj.employees WHERE name = {{employee.selectedOptionValue}}),
+	 {{amountIN.text}},
+	 {{Select1.selectedOptionValue}},
+	{{this.params.capital_in_id}}
+)

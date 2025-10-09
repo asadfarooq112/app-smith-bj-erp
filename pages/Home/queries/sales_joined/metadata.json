@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n\ts.sale_id,\n  s.date_added,\n  s.total_charged,\n  s.total_paid,\n  s.amount_due,\n  s.invoice_loc,\n  c.name AS customer_name,\n  e.name AS employee_name\nFROM\n  bj.sales AS s\nJOIN\n  bj.customer AS c\n  ON s.customer_id = c.customer_id\nJOIN\n  bj.employees AS e\n  ON s.employee_id = e.employee_id;\n",
+      "body": "SELECT\n\ts.sale_id,\n  s.date_added,\n  s.total_charged,\n  s.total_paid,\n  s.amount_due,\n  s.invoice_loc,\n  c.name AS customer_name,\n  e.name AS employee_name\nFROM\n  bj.sales AS s\nJOIN\n  bj.customer AS c\n  ON s.customer_id = c.customer_id\nJOIN\n  bj.employees AS e\n  ON s.employee_id = e.employee_id\nORDER BY\n  s.date_added DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

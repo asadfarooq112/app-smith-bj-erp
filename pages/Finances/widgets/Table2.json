@@ -37,7 +37,7 @@
     "transaction_value",
     "cashtx_id"
   ],
-  "columnUpdatedAt": 1759765522501,
+  "columnUpdatedAt": 1760026024686,
   "columnWidthMap": {
     "date": 161,
     "source": 151
@@ -103,8 +103,8 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 64,
   "needsErrorInfo": false,
-  "originalBottomRow": 67,
-  "originalTopRow": 20,
+  "originalBottomRow": 63,
+  "originalTopRow": 16,
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

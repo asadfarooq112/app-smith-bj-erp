@@ -1,2 +1,2 @@
 select * from bj.followup WHERE done = false
-ORDER BY date DESC
+ORDER BY date ASC
