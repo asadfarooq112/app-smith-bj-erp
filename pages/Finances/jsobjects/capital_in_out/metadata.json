@@ -1,8 +1,8 @@
 {
   "gitSyncId": "68b6eff59289a93060f5089f_ecd9aa21-8279-4800-9bc6-e67a64d6e38a",
-  "id": "Finances_JSObject1",
+  "id": "Finances_capital_in_out",
   "unpublishedCollection": {
-    "name": "JSObject1",
+    "name": "capital_in_out",
     "pageId": "Finances",
     "pluginId": "js-plugin",
     "pluginType": "JS",

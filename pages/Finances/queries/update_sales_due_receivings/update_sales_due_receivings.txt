@@ -1,0 +1,16 @@
+UPDATE bj.sales
+SET
+  cash = CASE WHEN {{method_due_receive.selectedOptionValue}} = 'cash' THEN COALESCE(cash, 0) + {{Number(amount_due_receive.text)}} ELSE cash END,
+  bank = CASE WHEN {{method_due_receive.selectedOptionValue}} = 'bank' THEN COALESCE(bank, 0) + {{Number(amount_due_receive.text)}} ELSE bank END,
+  card = CASE WHEN {{method_due_receive.selectedOptionValue}} = 'card' THEN COALESCE(card, 0) + {{Number(amount_due_receive.text)}} ELSE card END,
+  cod = CASE WHEN {{method_due_receive.selectedOptionValue}} = 'cod' THEN COALESCE(cod, 0) + {{Number(amount_due_receive.text)}} ELSE cod END,
+  exchange_adjustment = CASE WHEN {{method_due_receive.selectedOptionValue}} = 'exchange adjustment' THEN COALESCE(exchange_adjustment, 0) + {{Number(amount_due_receive.text)}} ELSE exchange_adjustment END,
+  
+  -- increase total_paid by the amount received
+  total_paid = COALESCE(total_paid, 0) + {{Number(amount_due_receive.text)}},
+  
+  -- reduce amount_due by the same amount
+  amount_due = COALESCE(amount_due, 0) - {{Number(amount_due_receive.text)}}
+  
+WHERE
+  sale_id = {{Table3.triggeredRow.sale_id}};

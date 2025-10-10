@@ -1,0 +1,21 @@
+SELECT
+  s.sale_id,
+  s.date_added,
+  s.total_charged,
+  s.total_paid,
+  s.amount_due,
+  s.invoice_loc,
+  c.name AS customer_name,
+  e.name AS employee_name
+FROM
+  bj.sales AS s
+JOIN
+  bj.customer AS c
+  ON s.customer_id = c.customer_id
+JOIN
+  bj.employees AS e
+  ON s.employee_id = e.employee_id
+WHERE
+  s.amount_due > 0
+ORDER BY
+  s.date_added DESC;

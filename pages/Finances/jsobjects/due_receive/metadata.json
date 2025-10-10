@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_ff8acce9-7a9c-4508-92a9-597c5853329b",
+  "id": "Finances_due_receive",
+  "unpublishedCollection": {
+    "name": "due_receive",
+    "pageId": "Finances",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

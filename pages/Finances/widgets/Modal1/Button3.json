@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{JSObject1.capitalIn();}}",
+  "onClick": "{{capital_in_out.capitalIn();}}",
   "parentId": "73ek73kq76",
   "placement": "CENTER",
   "recaptchaType": "V3",
