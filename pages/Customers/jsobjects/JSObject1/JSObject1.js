@@ -62,18 +62,18 @@ export default {
 			//db event
 			await event_insert.run({
 				event: 'db.insert', 
-				event_from: 'appsmith frontend', 
+				event_from: 'appsmith frontend customer page', 
 				event_to: 'bj.customer', 
-				actor: appsmith.user.name, 
+				actor: employee_adding_customer.selectedOptionValue, 
 				payload: payload_data
 			})
 
 			//biz event
 			await event_insert.run({
 				event: 'business.customer_insert', 
-				event_from: 'appsmith frontend', 
+				event_from: 'appsmith frontend customer page', 
 				event_to: 'bj.customer', 
-				actor: 'employee', 
+				actor: employee_adding_customer.selectedOptionValue, 
 				payload: payload_data
 			})
 

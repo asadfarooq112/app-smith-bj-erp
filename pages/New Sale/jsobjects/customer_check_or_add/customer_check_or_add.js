@@ -33,18 +33,18 @@ showAlert('Enter Customer Name or Phone');
 			//db event
 			await event_insert.run({
 				event: 'db.insert', 
-				event_from: 'appsmith frontend', 
+				event_from: 'appsmith frontend new sale', 
 				event_to: 'bj.customer', 
-				actor: appsmith.user.name, 
+				actor: 'Employee who made the invoice for this date/time and customer', 
 				payload: payload_data
 			})
 
 			//biz event
 			await event_insert.run({
 				event: 'business.customer_insert', 
-				event_from: 'appsmith frontend', 
+				event_from: 'appsmith frontend new sale', 
 				event_to: 'bj.customer', 
-				actor: 'employee', 
+				actor: 'Employee who made the invoice for this date/time and customer', 
 				payload: payload_data
 			})
 

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE bj.sku\nSET \n\t\t\timage = {{newSku_imgCopy.text}}, \n\t\t\tretail_price = {{newSku_retailCopy.text}},\n\t\t\tmin_qty = {{newSku_minQtyCopy.text}},\n\t\t\tdia_qty = {{newSku_DqtyCopy.text}},\n\t\t\tmetal_type = {{newSku_metalTypeCopy.selectedOptionValue}},\n\t\t\tcategory = {{newSku_categoryCopy.selectedOptionValue}},\n\t\t\tcost_price = {{newSku_costCopy.text}}\nWHERE sku_id = {{Table1.triggeredRow.sku_id}};\n",
+      "body": "UPDATE bj.sku\nSET \n\t\t\timage = {{newSku_imgCopy.text}}, \n\t\t\tretail_price = {{newSku_retailCopy.text}},\n\t\t\tmin_qty = {{newSku_minQtyCopy.text}},\n\t\t\tdia_qty = {{newSku_DqtyCopy.text}},\n\t\t\tmetal_type = {{newSku_metalTypeCopy.selectedOptionValue}},\n\t\t\tcategory = {{newSku_categoryCopy.selectedOptionValue}},\n\t\t\tcost_price = {{newSku_costCopy.text}},\n\t\t\tsupplier = {{Select1Copy1Copy.selectedOptionValue}}\nWHERE sku_id = {{Table1.triggeredRow.sku_id}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

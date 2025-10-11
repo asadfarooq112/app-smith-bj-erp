@@ -1,0 +1,25 @@
+SELECT
+  s.sku_id,
+  s.code,
+  s.image,
+  s.min_qty,
+  s.supplier,
+  s.pcs_in_transit,
+  COUNT(i.inventory_id) AS on_hand_quantity,
+  COALESCE(ROUND(AVG(i.metal_weight)::numeric, 2), 0) AS avg_metal_weight,
+  COALESCE(ROUND(AVG(i.diamond_weight)::numeric, 2), 0) AS avg_diamond_weight,
+  GREATEST(
+    s.min_qty - COUNT(i.inventory_id) - COALESCE(s.pcs_in_transit, 0),
+    0
+  ) AS order_qty
+FROM
+  bj.sku AS s
+LEFT JOIN
+  bj.inventory AS i
+  ON s.code = i.code
+GROUP BY
+  s.sku_id, s.code, s.image, s.min_qty, s.supplier, s.pcs_in_transit
+HAVING
+  (s.min_qty - COUNT(i.inventory_id) - COALESCE(s.pcs_in_transit, 0)) > 0
+ORDER BY
+  s.min_qty DESC;

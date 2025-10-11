@@ -36,6 +36,10 @@
     {
       "id": "Finances",
       "isDefault": false
+    },
+    {
+      "id": "Production",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

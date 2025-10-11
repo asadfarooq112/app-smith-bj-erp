@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO bj.sku (code, image, retail_price, min_qty, dia_qty, metal_type, category, cost_price)\nVALUES (\n\t{{newSku_code.text}}, \n\t{{newSku_img.text}}, \n\t{{newSku_retail.text}},\n\t{{newSku_minQty.text}},\n\t{{newSku_Dqty.text}},\n\t{{newSku_metalType.selectedOptionValue}},\n\t{{newSku_category.selectedOptionValue}},\n\t{{newSku_cost.text}}\n\t);",
+      "body": "INSERT INTO bj.sku (code, image, retail_price, min_qty, dia_qty, metal_type, category, cost_price, supplier)\nVALUES (\n\t{{newSku_code.text}}, \n\t{{newSku_img.text}}, \n\t{{newSku_retail.text}},\n\t{{newSku_minQty.text}},\n\t{{newSku_Dqty.text}},\n\t{{newSku_metalType.selectedOptionValue}},\n\t{{newSku_category.selectedOptionValue}},\n\t{{newSku_cost.text}},\n\t{{Select1Copy1.selectedOptionValue}}\n\t);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

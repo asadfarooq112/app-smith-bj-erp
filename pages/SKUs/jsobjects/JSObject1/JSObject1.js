@@ -14,7 +14,8 @@ export default {
 			DiamondQty: ${newSku_Dqty.text},
 			MetalType: ${newSku_metalType.selectedOptionValue},
 			Category: ${newSku_category.selectedOptionValue},
-			Cost: ${newSku_cost.text}
+			Cost: ${newSku_cost.text},
+			Supplier: ${Select1Copy1.selectedOptionValue}
 			`;
 				
 			
@@ -23,7 +24,7 @@ export default {
 					event: 'db.insert', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
-					actor: 'employee', 
+					actor: Select1.selectedOptionValue, 
 					payload: payload_data
 				});
 
@@ -32,7 +33,7 @@ export default {
 					event: 'business.sku_insert', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
-					actor: 'employee', 
+					actor: Select1.selectedOptionValue, 
 					payload: payload_data
 				});
 			
@@ -68,7 +69,8 @@ export default {
 			DiamondQty: ${newSku_DqtyCopy.text},
 			MetalType: ${newSku_metalTypeCopy.selectedOptionValue},
 			Category: ${newSku_categoryCopy.selectedOptionValue},
-			Cost: ${newSku_costCopy.text}
+			Cost: ${newSku_costCopy.text},
+			Supplier: ${Select1Copy1Copy.selectedOptionValue}
 			`;
 				
 
@@ -77,7 +79,7 @@ export default {
 					event: 'db.update', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
-					actor: 'employee', 
+					actor: Select1Copy.selectedOptionValue, 
 					payload: payload_data
 				});
 
@@ -86,7 +88,7 @@ export default {
 					event: 'business.sku_update', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
-					actor: 'employee', 
+					actor: Select1Copy.selectedOptionValue, 
 					payload: payload_data
 				});
 

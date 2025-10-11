@@ -15,7 +15,7 @@ export default {
 					event: 'db.update', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.inventory', 
-					actor: 'employee', 
+					actor: Select1CopyCopy1.selectedOptionValue, 
 					payload: payload_data
 				});
 
@@ -24,7 +24,7 @@ export default {
 					event: 'business.inventory_update', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.inventory', 
-					actor: 'employee', 
+					actor: Select1CopyCopy1.selectedOptionValue, 
 					payload: payload_data
 				});
 
@@ -64,7 +64,7 @@ export default {
 				event: 'db.insert', 
 				event_from: 'appsmith frontend', 
 				event_to: 'bj.inventory', 
-				actor: 'employee', 
+				actor: Select1CopyCopy.selectedOptionValue, 
 				payload: payload_data
 			})
 
@@ -73,7 +73,7 @@ export default {
 				event: 'business.inventory_insert', 
 				event_from: 'appsmith frontend', 
 				event_to: 'bj.inventory', 
-				actor: 'employee', 
+				actor: Select1CopyCopy.selectedOptionValue, 
 				payload: payload_data
 			})
 

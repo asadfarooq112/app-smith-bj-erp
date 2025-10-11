@@ -6,5 +6,6 @@ SET
 			dia_qty = {{newSku_DqtyCopy.text}},
 			metal_type = {{newSku_metalTypeCopy.selectedOptionValue}},
 			category = {{newSku_categoryCopy.selectedOptionValue}},
-			cost_price = {{newSku_costCopy.text}}
+			cost_price = {{newSku_costCopy.text}},
+			supplier = {{Select1Copy1Copy.selectedOptionValue}}
 WHERE sku_id = {{Table1.triggeredRow.sku_id}};

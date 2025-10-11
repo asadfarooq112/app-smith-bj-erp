@@ -13,8 +13,8 @@ export default {
 			event: 'db.insert', 
 			event_from: 'appsmith frontend', 
 			event_to: 'bj.attendance', 
-			actor: 'employee', 
-			payload: Select_Employee.selectedOptionValue
+			actor: Select_Employee.selectedOptionValue,
+			payload: `${Select_Employee.selectedOptionValue} attendance marked`
 			
 		})
 		
@@ -23,8 +23,8 @@ export default {
 			event: 'business.attendance_marked', 
 			event_from: 'appsmith frontend', 
 			event_to: 'bj.attendance', 
-			actor: 'employee', 
-			payload: Select_Employee.selectedOptionValue
+			actor: Select_Employee.selectedOptionValue,
+			payload: `${Select_Employee.selectedOptionValue} attendance marked`
 			
 		})
 			
