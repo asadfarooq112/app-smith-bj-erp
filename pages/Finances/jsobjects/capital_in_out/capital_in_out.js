@@ -122,7 +122,7 @@ console.log (e)
 			
 			closeModal(Modal1Copy.name);
 			showAlert(`Added ${amountCopy.text} as Capital Out`);
-			
+
 		}
 			else {
 		

@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 404,
+  "bottomRow": 474,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 340,
+      "bottomRow": 410,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 340,
+      "minHeight": 420,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "p031blqvht",
+      "parentId": "5y8fiov1wt",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "52glkaqvlo",
-      "widgetName": "Canvas1CopyCopy"
+      "widgetId": "zu2f5igm78",
+      "widgetName": "Canvas1Copy1"
     }
   ],
   "detachFromLayout": true,
@@ -62,20 +62,20 @@
       "key": "onClose"
     }
   ],
-  "height": 340,
+  "height": 410,
   "isCanvas": true,
   "isLoading": false,
   "key": "m9ul5emlxx",
   "leftColumn": 18,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 340,
+  "minHeight": 240,
   "mobileBottomRow": 66,
   "mobileLeftColumn": 18,
   "mobileRightColumn": 42,
   "mobileTopRow": 42,
   "needsErrorInfo": false,
-  "onClose": "{{financial_transactions.run();\ncash_transactions.run()}}",
+  "onClose": "{{cash_transactions.run();\nfinancial_transactions.run()}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -85,7 +85,7 @@
   "topRow": 64,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "p031blqvht",
-  "widgetName": "Modal_due_receive",
-  "width": 426
+  "widgetId": "5y8fiov1wt",
+  "widgetName": "Modal_expense",
+  "width": 638
 }

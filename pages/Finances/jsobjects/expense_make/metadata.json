@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_56b4eabb-faf4-4e46-8b60-d7edd911b1d8",
+  "id": "Finances_expense_make",
+  "unpublishedCollection": {
+    "name": "expense_make",
+    "pageId": "Finances",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

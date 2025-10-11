@@ -1,0 +1,10 @@
+INSERT INTO bj.expenses (employee_id, amount, method, expense_id, type, description, image)
+VALUES (
+	(SELECT employee_id FROM bj.employees WHERE name = {{employeeCopy1.selectedOptionValue}}),
+	 {{amountINCopy.text}},
+	 {{Select1Copy1.selectedOptionValue}},
+{{this.params.expense_id}},
+	{{Select2.selectedOptionValue}},
+	{{Input2.text}},
+	'amazons3/ai-shah-automation/bj/<date>/<type>-<description>'
+);

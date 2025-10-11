@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "x8oct2j6vz",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Expense Type:",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 15,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 7.46875,
+  "parentId": "zu2f5igm78",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 29,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Diamond Purchase\",\n    \"code\": \"cogs_diamond\"\n  },\n  {\n    \"name\": \"Gold Purchase\",\n    \"code\": \"cogs_gold\"\n  },\n  {\n    \"name\": \"Palldium Purchase\",\n    \"code\": \"cogs_palladium\"\n  },\n  {\n    \"name\": \"Labor / Making Charges\",\n    \"code\": \"cogs_labor\"\n  },\n  {\n    \"name\": \"Packaging & Presentation\",\n    \"code\": \"cogs_packaging\"\n  },\n  {\n    \"name\": \"Rent\",\n    \"code\": \"opex_rent\"\n  },\n  {\n    \"name\": \"Utilities & Bills\",\n    \"code\": \"opex_utilities\"\n  },\n  {\n    \"name\": \"Marketing & Advertising\",\n    \"code\": \"opex_marketing\"\n  },\n  {\n    \"name\": \"Photoshoot & Visuals\",\n    \"code\": \"opex_photoshoot\"\n  },\n  {\n    \"name\": \"Bank Charges\",\n    \"code\": \"financial_bank\"\n  },\n  {\n    \"name\": \"Tax\",\n    \"code\": \"tax_sales\"\n  },\n  {\n    \"name\": \"Communication\",\n    \"code\": \"opex_communication\"\n  },\n  {\n    \"name\": \"Courier & Logistics\",\n    \"code\": \"opex_courier\"\n  },\n  {\n    \"name\": \"Customer Entertainment\",\n    \"code\": \"opex_customer_entertainment\"\n  },\n  {\n    \"name\": \"General Entertainment\",\n    \"code\": \"opex_entertainment\"\n  },\n  {\n    \"name\": \"Fuel\",\n    \"code\": \"opex_fuel_vehicle\"\n  },\n  {\n    \"name\": \"IT & Hardware\",\n    \"code\": \"opex_it_hardware\"\n  },\n  {\n    \"name\": \"Office Supplies\",\n    \"code\": \"opex_office_supplies\"\n  },\n  {\n    \"name\": \"Professional Fees\",\n    \"code\": \"opex_professional\"\n  },\n  {\n    \"name\": \"Security & Surveillance\",\n    \"code\": \"opex_security\"\n  },\n  {\n    \"name\": \"IT Services\",\n    \"code\": \"opex_software_dev\"\n  },\n  {\n    \"name\": \"Staff Bonuses & Allowances\",\n    \"code\": \"opex_staff_bonuses\"\n  },\n  {\n    \"name\": \"Staff Meals & Pantry\",\n    \"code\": \"opex_staff_meals\"\n  },\n  {\n    \"name\": \"Store Maintenance & Repairs\",\n    \"code\": \"opex_maintenance\"\n  },\n  {\n    \"name\": \"Travel & Transport\",\n    \"code\": \"opex_travel\"\n  },\n  {\n    \"name\": \"Owner's Personal Payments\",\n    \"code\": \"owner_expenses\"\n  },\n\t{\n    \"name\": \"Other...\",\n    \"code\": \"other\"\n\t\t}\n  \n]",
+  "topRow": 15,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "g9x6h3ebuc",
+  "widgetName": "Select2"
+}
