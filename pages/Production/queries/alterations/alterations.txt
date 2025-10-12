@@ -1,0 +1,11 @@
+SELECT
+  a.*,              -- all columns from alterations_or_new_make
+  s.image,
+  s.metal_type
+FROM
+  bj.alterations_or_new_make AS a
+JOIN
+  bj.sku AS s
+  ON a.code = s.code
+WHERE
+  a.type = 'alteration';

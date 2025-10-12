@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_768668f5-e5af-4eee-812c-66d7f032ad2f",
-  "id": "Inventory_image_from_sku_return",
+  "gitSyncId": "68b6eff59289a93060f5089f_3c5937f7-38f1-438a-b5bb-530758a10f6a",
+  "id": "Production_alterations",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT image \nFROM bj.sku s\nwhere s.code = {{return_code_select.selectedOptionValue}}",
+      "body": "SELECT\n  a.*,              -- all columns from alterations_or_new_make\n  s.image,\n  s.metal_type\nFROM\n  bj.alterations_or_new_make AS a\nJOIN\n  bj.sku AS s\n  ON a.code = s.code\nWHERE\n  a.type = 'alteration';\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "image_from_sku_return",
-    "pageId": "Inventory",
-    "runBehaviour": "MANUAL",
+    "dynamicBindingPathList": [],
+    "name": "alterations",
+    "pageId": "Production",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

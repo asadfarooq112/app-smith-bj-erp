@@ -1,0 +1,3 @@
+SELECT image 
+FROM bj.sku s
+where s.code = {{code_select_add.selectedOptionValue}}

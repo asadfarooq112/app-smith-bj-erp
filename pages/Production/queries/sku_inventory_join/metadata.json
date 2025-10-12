@@ -1,6 +1,6 @@
 {
   "gitSyncId": "68b6eff59289a93060f5089f_6fe99d80-ea8b-4f57-9ce7-faa2d210e9b8",
-  "id": "Production_Query1",
+  "id": "Production_sku_inventory_join",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -23,7 +23,7 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query1",
+    "name": "sku_inventory_join",
     "pageId": "Production",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false

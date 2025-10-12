@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_768668f5-e5af-4eee-812c-66d7f032ad2f",
-  "id": "Inventory_image_from_sku_return",
+  "gitSyncId": "68b6eff59289a93060f5089f_3201e863-167d-48c0-b288-bcd902a53a17",
+  "id": "Production_image_from_sku_add",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT image \nFROM bj.sku s\nwhere s.code = {{return_code_select.selectedOptionValue}}",
+      "body": "SELECT image \nFROM bj.sku s\nwhere s.code = {{code_select_add.selectedOptionValue}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "name": "image_from_sku_return",
-    "pageId": "Inventory",
-    "runBehaviour": "MANUAL",
+    "name": "image_from_sku_add",
+    "pageId": "Production",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

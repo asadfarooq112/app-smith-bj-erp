@@ -29,7 +29,7 @@
     ],
     "name": "image_from_sku_add",
     "pageId": "Inventory",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

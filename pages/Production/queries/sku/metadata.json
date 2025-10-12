@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_768668f5-e5af-4eee-812c-66d7f032ad2f",
-  "id": "Inventory_image_from_sku_return",
+  "gitSyncId": "68b6eff59289a93060f5089f_71d78eb5-3932-4634-9636-a15c5c0f0058",
+  "id": "Production_sku",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT image \nFROM bj.sku s\nwhere s.code = {{return_code_select.selectedOptionValue}}",
+      "body": "SELECT * FROM bj.sku",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "image_from_sku_return",
-    "pageId": "Inventory",
-    "runBehaviour": "MANUAL",
+    "dynamicBindingPathList": [],
+    "name": "sku",
+    "pageId": "Production",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }
