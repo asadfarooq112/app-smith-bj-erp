@@ -1,0 +1,3 @@
+UPDATE bj.sku
+SET pcs_in_transit = pcs_in_transit - bla1
+WHERE sku_id = 'bla2';

@@ -117,6 +117,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.image.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -278,6 +281,7 @@
       "label": "Receive Pcs",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{showModal(Modal_replenishment_receive.name);}}",
       "originalId": "customColumn1",
       "sticky": "right",
       "textSize": "0.875rem",
