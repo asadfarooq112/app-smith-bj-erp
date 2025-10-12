@@ -1,0 +1,8 @@
+INSERT INTO bj.events (event, event_from, event_to, actor, payload)
+VALUES (
+  {{this.params.event}},
+  {{this.params.event_from}},
+  {{this.params.event_to}},
+  {{this.params.actor}},
+  {{this.params.payload}}
+);

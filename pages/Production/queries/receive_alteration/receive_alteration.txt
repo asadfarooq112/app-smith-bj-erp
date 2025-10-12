@@ -1,0 +1,3 @@
+UPDATE bj.alterations_or_new_make
+SET received = true
+WHERE id = {{Table2Copy.triggeredRow.id}}

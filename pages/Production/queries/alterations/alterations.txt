@@ -8,4 +8,6 @@ JOIN
   bj.sku AS s
   ON a.code = s.code
 WHERE
-  a.type = 'alteration';
+  a.type = 'alteration'
+	  AND a.received = false;
+

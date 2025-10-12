@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  a.*,              -- all columns from alterations_or_new_make\n  s.image,\n  s.metal_type\nFROM\n  bj.alterations_or_new_make AS a\nJOIN\n  bj.sku AS s\n  ON a.code = s.code\nWHERE\n  a.type = 'alteration';\n",
+      "body": "SELECT\n  a.*,              -- all columns from alterations_or_new_make\n  s.image,\n  s.metal_type\nFROM\n  bj.alterations_or_new_make AS a\nJOIN\n  bj.sku AS s\n  ON a.code = s.code\nWHERE\n  a.type = 'alteration'\n\t  AND a.received = false;\n\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

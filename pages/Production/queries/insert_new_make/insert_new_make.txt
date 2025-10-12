@@ -1,0 +1,10 @@
+INSERT INTO bj.alterations_or_new_make (code, type, required_date, customer_name, new_size, comment, employee)
+VALUES(
+{{code_select_addCopy.selectedOptionValue}},
+	'new_make',
+	{{DatePicker1Copy.selectedDate}},
+	{{Input3Copy.text}},
+	{{Input1Copy.text}},
+	{{Input2Copy.text}},
+	{{Select1CopyCopyCopy.selectedOptionValue}}
+)

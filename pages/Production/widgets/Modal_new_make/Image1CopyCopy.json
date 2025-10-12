@@ -3,7 +3,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 22,
   "boxShadow": "none",
-  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "defaultImage": "",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -16,7 +16,7 @@
   "enableDownload": false,
   "enableRotation": false,
   "flexVerticalAlignment": "start",
-  "image": "{{image_from_sku_add.data[0].image}}",
+  "image": "{{image_from_sku_addCopy.data[0].image}}",
   "imageShape": "RECTANGLE",
   "isLoading": false,
   "isVisible": true,

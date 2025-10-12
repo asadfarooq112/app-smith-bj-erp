@@ -44,9 +44,10 @@
     "produced",
     "comment",
     "employee",
+    "date_added",
     "received"
   ],
-  "columnUpdatedAt": 1760279714606,
+  "columnUpdatedAt": 1760282768127,
   "columnWidthMap": {
     "code": 88,
     "comment": 262,
@@ -124,6 +125,9 @@
     },
     {
       "key": "primaryColumns.employee.computedValue"
+    },
+    {
+      "key": "primaryColumns.date_added.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -131,7 +135,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.received.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -285,6 +293,40 @@
       "label": "Customer",
       "notation": "standard",
       "originalId": "customer_name",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "date_added": {
+      "alias": "date_added",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table2.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date_added\"])) : date_added })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "date_added",
+      "index": 13,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "date_added",
+      "notation": "standard",
+      "originalId": "date_added",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -529,6 +571,7 @@
       "isVisible": true,
       "label": "Receive",
       "notation": "standard",
+      "onClick": "{{showModal(Modal3Copy.name);}}",
       "originalId": "received",
       "sticky": "right",
       "textColor": "",

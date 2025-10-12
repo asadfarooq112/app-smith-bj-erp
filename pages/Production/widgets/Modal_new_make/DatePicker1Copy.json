@@ -7,7 +7,6 @@
   "closeOnSelection": true,
   "dateFormat": "LL",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "2025-10-12T14:25:37.465Z",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

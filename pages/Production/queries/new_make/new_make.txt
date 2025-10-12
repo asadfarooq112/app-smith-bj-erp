@@ -8,4 +8,6 @@ JOIN
   bj.sku AS s
   ON a.code = s.code
 WHERE
-  a.type = 'new_make';
+  a.type = 'new_make'
+	  AND a.received = false;
+
