@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_999f0e4a-caf5-445f-a76d-1f099a3ce143",
-  "id": "Production_receive_replenishment",
+  "gitSyncId": "68b6eff59289a93060f5089f_08c56565-213a-40b9-b824-41d05ea0f8f2",
+  "id": "Production_handover_replenishment",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE bj.sku\nSET pcs_in_transit = pcs_in_transit - {{Number(Input7.text)}}\nWHERE sku_id = {{Table1.triggeredRow.sku_id}}\n",
+      "body": "INSERT INTO bj.handovers (items, handover_from, handover_to, location, pic, comment)\nVALUES (\n{{Text5CopyCopy.text}},\n\t{{Input4Copy1Copy.text}},\n\t{{Input4CopyCopyCopy.text}},\n\t{{Input5CopyCopy.text}},\n\t'amazon s3: bj/handovers/production-to-shop/date/',\n\t{{Input6CopyCopy.text}}\n)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "receive_replenishment",
+    "name": "handover_replenishment",
     "pageId": "Production",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

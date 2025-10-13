@@ -116,5 +116,78 @@ async alterationHandover () {
 			console.log(e?.message);
 			throw(e);
 		}
+	},
+	
+	
+	transitCheck () {
+
+		if (Table1.triggeredRow.pcs_in_transit <= 0) {
+				showAlert('No pieces in Transit. How can you receive? Take handover from supplier first!', 'error');
+}
+			else {
+showModal(Modal_replenishment_receive.name);
+			}
+	
+},
+		
+	
+	async replenishmentHandover () {
+	
+		try {
+	
+			
+			const payload_data = `
+			Item: ${Text5CopyCopy.text}, 
+			By: ${Input4Copy1Copy.text},
+			To: ${Input4CopyCopyCopy.text},
+			Location: ${Input5CopyCopy.text},
+			Comment: ${Input6CopyCopy.text}
+			`;
+			
+
+			await Promise.all([
+				
+				receive_replenishment.run(),
+				handover_replenishment.run(),
+				upload_replenishment_handovers.run(),
+				
+			
+				//db event
+				event_insert.run({
+					event: 'db.insert', 
+					event_from: 'appsmith frontend production', 
+					event_to: 'bj.handovers', 
+					actor: Input4Copy1Copy.text, 
+					payload: payload_data
+				}),
+
+				//biz event
+				event_insert.run({
+					event: 'business.new_make_product_received', 
+					event_from: 'appsmith frontend production', 
+					event_to: 'bj.handovers', 
+					actor: Input4Copy1Copy.text,
+					payload: payload_data
+				})
+			
+				
+				
+			])
+				
+
+			
+			
+			
+
+			closeModal(Modal_replenishment_receive.name);
+			showAlert(`Received Replenishment Handover: ${payload_data}`);
+
+			await sku_inventory_join.run();
+
+		}
+		catch (e) {
+			console.log(e?.message);
+			throw(e);
+		}
 	}
 }

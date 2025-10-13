@@ -1,0 +1,9 @@
+INSERT INTO bj.handovers (items, handover_from, handover_to, location, pic, comment)
+VALUES (
+{{Text5CopyCopy.text}},
+	{{Input4Copy1Copy.text}},
+	{{Input4CopyCopyCopy.text}},
+	{{Input5CopyCopy.text}},
+	'amazon s3: bj/handovers/production-to-shop/date/',
+	{{Input6CopyCopy.text}}
+)

@@ -1,3 +1,3 @@
 UPDATE bj.sku
-SET pcs_in_transit = pcs_in_transit - bla1
-WHERE sku_id = 'bla2';
+SET pcs_in_transit = pcs_in_transit - {{Number(Input7.text)}}
+WHERE sku_id = {{Table1.triggeredRow.sku_id}}

@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 21,
+  "bottomRow": 20,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -12,10 +12,17 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "maxNum"
+    },
+    {
+      "key": "errorMessage"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
+  "errorMessage": "How can you receive more items than in transit? In this case: {{Table1.triggeredRow.pcs_in_transit}}",
   "iconAlign": "left",
   "inputType": "NUMBER",
   "isDisabled": false,
@@ -31,6 +38,7 @@
   "labelWidth": 5,
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
+  "maxNum": "{{Table1.triggeredRow.pcs_in_transit}}",
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 20,
@@ -38,8 +46,8 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 13,
   "needsErrorInfo": false,
-  "originalBottomRow": 20,
-  "originalTopRow": 13,
+  "originalBottomRow": 21,
+  "originalTopRow": 14,
   "parentColumnSpace": 11,
   "parentId": "2b4jw472m8",
   "parentRowSpace": 10,
@@ -49,7 +57,7 @@
   "rightColumn": 13,
   "shouldAllowAutofill": false,
   "showStepArrows": false,
-  "topRow": 14,
+  "topRow": 13,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "q3reveit0c",
