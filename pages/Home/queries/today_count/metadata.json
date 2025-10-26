@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "today_count",
     "pageId": "Home",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
