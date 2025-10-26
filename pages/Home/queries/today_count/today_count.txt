@@ -1,0 +1,17 @@
+SELECT
+  TO_CHAR(
+    (c.date_added AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Karachi'),
+    'DD Mon YYYY, HH12:MI AM'
+  ) AS date_added,
+  e.name AS employee_name,
+  c.count_data
+FROM
+  bj.counting AS c
+JOIN
+  bj.employees AS e
+  ON c.employee_id = e.employee_id
+WHERE
+  (c.date_added AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Karachi')::date = 
+    (CURRENT_DATE AT TIME ZONE 'Asia/Karachi')::date
+ORDER BY
+  c.date_added DESC;

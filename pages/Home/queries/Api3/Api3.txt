@@ -1,0 +1,16 @@
+{
+  "date": {{datetime.text}},
+  "stockCounts": {{appsmith.store.counting}},
+  "net_sales": {{net_sales.text}},
+  "returns": {{returns.text}},
+  "cash": {{cash.text}},
+  "bank": {{bank.text}},
+  "card": {{card.text}},
+  "cod": {{cod.text}},
+  "amount_due": {{due.text}},
+  "cash_in_hand": {{dueCopy.text}},
+  "calls": {{Input5.text}},
+  "whatsapp": {{Input5Copy.text}},
+  "insta": {{Input5Copy1.text}},
+  "fb": {{Input5Copy2.text}}
+}

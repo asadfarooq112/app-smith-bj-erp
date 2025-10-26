@@ -1,0 +1,7 @@
+INSERT INTO bj.num_of_inquiries (calls, whatsapp, insta, fb)
+VALUES (
+	{{Input5.text}},
+	{{Input5Copy.text}},
+	{{Input5Copy1.text}},
+	{{Input5Copy2.text}}
+);
