@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_fb82c916-f88a-4a47-9022-061bf0391c9b",
+  "id": "Home_closing",
+  "unpublishedCollection": {
+    "name": "closing",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
