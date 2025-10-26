@@ -25,28 +25,34 @@ showAlert('Enter Customer Name or Phone');
 	
 	async insertCustomer () {
 		try {
+			
+		const payload_data = `Name: ${cust_name.text}, Phone: ${cust_phone.text}, Address: ${cust_address.text} `;
 
-			await customer_add.run();
-
-			const payload_data = `Name: ${cust_name.text}, Phone: ${cust_phone.text}, Address: ${cust_address.text} `;
+		Promise.all([
+			
+			customer_add.run(),
 
 			//db event
-			await event_insert.run({
+			event_insert.run({
 				event: 'db.insert', 
 				event_from: 'appsmith frontend new sale', 
 				event_to: 'bj.customer', 
 				actor: 'Employee who made the invoice for this date/time and customer', 
 				payload: payload_data
-			})
+			}),
 
 			//biz event
-			await event_insert.run({
+		event_insert.run({
 				event: 'business.customer_insert', 
 				event_from: 'appsmith frontend new sale', 
 				event_to: 'bj.customer', 
 				actor: 'Employee who made the invoice for this date/time and customer', 
 				payload: payload_data
 			})
+			
+		])
+			
+	
 
 
 			showAlert(`Inserted New customer: ${payload_data}`);

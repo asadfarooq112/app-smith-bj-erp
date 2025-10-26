@@ -3,8 +3,6 @@ export default {
 
 	async insertInventory () {
 		try {
-
-			await sku_insert.run();
 			
 			const payload_data = `
 			Code: ${newSku_code.text}, 
@@ -17,25 +15,32 @@ export default {
 			Cost: ${newSku_cost.text},
 			Supplier: ${Select1Copy1.selectedOptionValue}
 			`;
+			
+			Promise.all([
 				
+			sku_insert.run(),
 			
 				//db event
-				await event_insert.run({
+			event_insert.run({
 					event: 'db.insert', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
 					actor: Select1.selectedOptionValue, 
 					payload: payload_data
-				});
+				}),
 
 				//biz event
-				await event_insert.run({
+			event_insert.run({
 					event: 'business.sku_insert', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
 					actor: Select1.selectedOptionValue, 
 					payload: payload_data
-				});
+				})
+			
+				
+			])
+
 			
 			
 			
@@ -58,10 +63,8 @@ export default {
 		try {
 
 			if (Input1.text == 381000) {
-
-			await sku_update.run();
-
-			const payload_data = `
+				
+		const payload_data = `
 			Code: ${Text2.text}, 
 			Img: ${newSku_imgCopy.text}, 
 			Retail: ${newSku_retailCopy.text},
@@ -72,26 +75,33 @@ export default {
 			Cost: ${newSku_costCopy.text},
 			Supplier: ${Select1Copy1Copy.selectedOptionValue}
 			`;
+
 				
+				Promise.all([
+					
+			sku_update.run(),
 
 				//db event
-				await event_insert.run({
+			event_insert.run({
 					event: 'db.update', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
 					actor: Select1Copy.selectedOptionValue, 
 					payload: payload_data
-				});
+				}),
 
 				//biz event
-				await event_insert.run({
+			event_insert.run({
 					event: 'business.sku_update', 
 					event_from: 'appsmith frontend', 
 					event_to: 'bj.sku', 
 					actor: Select1Copy.selectedOptionValue, 
 					payload: payload_data
-				});
+				})
 
+					
+				])
+			
 
 				closeModal(sku_edit_modal.name);
 				showAlert(`Updated: ${payload_data}`);

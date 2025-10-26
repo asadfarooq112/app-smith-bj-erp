@@ -1,0 +1,19 @@
+SELECT
+	i.inventory_id,
+  i.code,
+  i.size,
+  i.metal_weight,
+  i.diamond_weight,
+  s.image,
+  s.retail_price,
+  s.min_qty,
+  s.cost_price,
+  s.dia_qty,
+  s.metal_type,
+  s.category
+FROM bj.inventory AS i
+JOIN bj.sku       AS s
+  ON s.code = i.code
+WHERE i.branch_id = 'a758efa5-39c1-4a52-a27b-55b8cc979487'::uuid
+ AND i.is_sold = false
+ORDER BY i.code, i.size;

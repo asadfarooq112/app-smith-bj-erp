@@ -1,0 +1,3 @@
+{
+"products": {{appsmith.store.counting_products}}
+}

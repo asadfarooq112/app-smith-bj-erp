@@ -44,9 +44,10 @@
     "cost_price",
     "min_qty",
     "customColumn1",
-    "supplier"
+    "supplier",
+    "pcs_in_transit"
   ],
-  "columnUpdatedAt": 1760200723689,
+  "columnUpdatedAt": 1760614170655,
   "columnWidthMap": {
     "category": 105,
     "code": 133,
@@ -122,6 +123,9 @@
     },
     {
       "key": "primaryColumns.supplier.computedValue"
+    },
+    {
+      "key": "primaryColumns.pcs_in_transit.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -498,6 +502,40 @@
       "label": "min_qty",
       "notation": "standard",
       "originalId": "min_qty",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "pcs_in_transit": {
+      "alias": "pcs_in_transit",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"pcs_in_transit\"])) : pcs_in_transit })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "pcs_in_transit",
+      "index": 12,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "pcs_in_transit",
+      "notation": "standard",
+      "originalId": "pcs_in_transit",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

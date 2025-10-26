@@ -1,0 +1,8 @@
+SELECT
+  COUNT(*) AS total_count
+FROM bj.inventory AS i
+JOIN bj.sku AS s
+  ON s.code = i.code
+WHERE i.branch_id = 'a758efa5-39c1-4a52-a27b-55b8cc979487'::uuid
+  AND i.is_sold = false
+  AND s.category = 'Ladies Ring';

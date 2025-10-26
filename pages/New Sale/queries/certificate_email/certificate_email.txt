@@ -1,0 +1,3 @@
+{
+	"product": {{this.params.cert_data}}
+}

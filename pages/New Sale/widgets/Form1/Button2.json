@@ -32,7 +32,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 33,
   "needsErrorInfo": false,
-  "onClick": "{{invoice_download.invoiceDowload();\nsale_to_db.saleToDB();}}",
+  "onClick": "{{JSObject1.runSale();}}",
   "originalBottomRow": 134,
   "originalTopRow": 130,
   "parentId": "g26vdibfz4",

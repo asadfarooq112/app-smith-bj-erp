@@ -14,10 +14,6 @@
       "isDefault": true
     },
     {
-      "id": "Counting",
-      "isDefault": false
-    },
-    {
       "id": "Inventory",
       "isDefault": false
     },

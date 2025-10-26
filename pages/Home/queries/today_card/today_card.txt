@@ -1,0 +1,7 @@
+SELECT
+  COALESCE(SUM(card), 0) AS total_card
+FROM
+  bj.sales
+WHERE
+  date_added >= (CURRENT_DATE AT TIME ZONE 'Asia/Karachi')
+  AND date_added < ((CURRENT_DATE + INTERVAL '1 day') AT TIME ZONE 'Asia/Karachi');

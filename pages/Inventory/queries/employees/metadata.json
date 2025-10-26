@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "employees",
     "pageId": "Inventory",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

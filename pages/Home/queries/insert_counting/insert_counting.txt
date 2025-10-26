@@ -1,0 +1,7 @@
+INSERT INTO bj.counting (employee_id, count_data, comment, photos)
+VALUES (
+{{Select1Copy.selectedOptionValue}},
+{{this.params.count_data}},
+	{{Input4.text}},
+	'amazon s3 ai-automation/bj/counting/date/employee_name/'
+)
