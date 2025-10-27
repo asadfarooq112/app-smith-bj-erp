@@ -37,8 +37,8 @@ export default {
 
 				
 				
-				
-				const countingData = today_count.data.map(c => ({
+				const todayCount = await today_count.run();
+				const countingData = todayCount.map(c => ({
 				time: c.date_added,
 					employee: c.employee_name,
 					items_counted: c.count_data
