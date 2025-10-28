@@ -14,7 +14,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "iconAlign": "left",
   "iconName": "send-message",
   "isDefaultClickDisabled": true,
@@ -29,6 +33,7 @@
   "mobileRightColumn": 45,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
+  "onClick": "{{audit.myFun2();}}",
   "parentColumnSpace": 6.9375,
   "parentId": "81qlxx4fws",
   "parentRowSpace": 10,

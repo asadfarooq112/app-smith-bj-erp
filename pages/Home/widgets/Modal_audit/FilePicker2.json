@@ -20,7 +20,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "zsctrzdlsu",
-  "label": "Upload",
+  "label": "Select Files",
   "leftColumn": 35,
   "maxFileSize": 5,
   "maxNumFiles": 1,

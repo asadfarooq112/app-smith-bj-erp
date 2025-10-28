@@ -1,10 +1,10 @@
 export default {
 
-		initializeArrayCounting: () => {
+	initializeArrayCounting: () => {
 		storeValue('counting', []);
-		},
-			
-			
+	},
+
+
 	async closingReport () {
 
 		if (Input6.text != '381000') {
@@ -15,7 +15,7 @@ export default {
 		else {
 
 			try {
-	
+
 				const payload = `
 						{
 							"date": "${datetime.text}",
@@ -35,59 +35,59 @@ export default {
 						}
 						`;
 
-				
-				
+
+
 				const todayCount = await today_count.run();
 				const countingData = todayCount.map(c => ({
-				time: c.date_added,
+					time: c.date_added,
 					employee: c.employee_name,
 					items_counted: c.count_data
 				}))
 
 				storeValue("counting", countingData);
-				
+
 				await Promise.all([
-					
+
 					inquiries_insert.run(),
 					Api3.run(),
-					
+
 					//db event	
 					event_insert.run({
-					event: 'db.insert', 
-					event_from: 'appsmith sales frontend daily report', 
-					event_to: 'bj.num_of_inquiries', 
-					actor: Select_EmployeeCopy.selectedOptionValue, 
-					payload: payload
+						event: 'db.insert', 
+						event_from: 'appsmith sales frontend daily report', 
+						event_to: 'bj.num_of_inquiries', 
+						actor: Select_EmployeeCopy.selectedOptionValue, 
+						payload: payload
 					}),
-					
+
 					event_insert.run({
-					event: 'business.closing_report_generated', 
-					event_from: 'appsmith sales frontend daily report', 
-					event_to: 'bj.num_of_inquiries', 
-					actor: Select_EmployeeCopy.selectedOptionValue, 
-					payload: payload
+						event: 'business.closing_report_generated', 
+						event_from: 'appsmith sales frontend daily report', 
+						event_to: 'bj.num_of_inquiries', 
+						actor: Select_EmployeeCopy.selectedOptionValue, 
+						payload: payload
 					})
-					
-					
-					
-					
-					
+
+
+
+
+
 				])
-				
-				
-				
-				
-				
+
+
+
+
+
 				showAlert('Closing Report Generated');
 				closeModal(Modal_closing.name);
 
 			}
 
-catch (e) {
-  console.error("Closing report error:", e);
-  showAlert("Closing Report Generation Error: " + JSON.stringify(e, null, 2), "error");
-  throw e;
-}
+			catch (e) {
+				console.error("Closing report error:", e);
+				showAlert("Closing Report Generation Error: " + JSON.stringify(e, null, 2), "error");
+				throw e;
+			}
 
 
 
