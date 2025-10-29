@@ -1,5 +1,18 @@
+WITH bounds AS (
+  SELECT
+    -- Define local dates in Asia/Karachi
+    ((now() AT TIME ZONE 'Asia/Karachi')::date - INTERVAL '1 day') AS yday_local_date,
+    (now() AT TIME ZONE 'Asia/Karachi')::date AS today_local_date
+),
+window_utc AS (
+  SELECT
+    -- Convert Karachi local midnight boundaries to UTC
+    (yday_local_date::timestamp AT TIME ZONE 'Asia/Karachi') AS start_utc,
+    ((today_local_date + 1)::timestamp AT TIME ZONE 'Asia/Karachi') AS end_utc
+  FROM bounds
+)
 SELECT
-	s.sale_id,
+  s.sale_id,
   s.date_added,
   s.total_charged,
   s.total_paid,
@@ -10,10 +23,11 @@ SELECT
 FROM
   bj.sales AS s
 JOIN
-  bj.customer AS c
-  ON s.customer_id = c.customer_id
+  bj.customer  AS c ON s.customer_id = c.customer_id
 JOIN
-  bj.employees AS e
-  ON s.employee_id = e.employee_id
+  bj.employees AS e ON s.employee_id = e.employee_id
+WHERE
+  s.date_added >= (SELECT start_utc FROM window_utc)
+  AND s.date_added <  (SELECT end_utc FROM window_utc)
 ORDER BY
   s.date_added DESC;
