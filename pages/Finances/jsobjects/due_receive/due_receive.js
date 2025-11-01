@@ -75,10 +75,30 @@ export default {
 			}
 			
 		}
-		catch(e) {
-console.log (e)
-			throw(e);
-		}
+
+		
+						catch(e) {
+				showAlert('Error While Due Receive', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: employeeCopyCopy.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 	
 	}
 		

@@ -44,10 +44,29 @@ export default {
 				showAlert(`${Select1Copy.selectedOptionLabel} Counting Marked`);
 				closeModal(Modal5.name);
 
+
 			}
 
 			catch(e) {
-				showAlert('Counting not Marked. Some Error!', 'error');
+				showAlert('Error Submitting Counting!', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend counting', 
+					event_to: '-', 
+					actor: Select1Copy.selectedOptionValue,
+					payload: payloadString
+
+				})
+
 				throw(e);
 			}
 

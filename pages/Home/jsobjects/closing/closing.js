@@ -83,10 +83,27 @@ export default {
 
 			}
 
-			catch (e) {
-				console.error("Closing report error:", e);
-				showAlert("Closing Report Generation Error: " + JSON.stringify(e, null, 2), "error");
-				throw e;
+			catch(e) {
+				showAlert('Error Generating Closing Report!', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend closing', 
+					event_to: '-', 
+					actor: Select_EmployeeCopy.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
 			}
 
 

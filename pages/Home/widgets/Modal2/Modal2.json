@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 460,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +80,7 @@
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"Input1Copy\");\nresetWidget(\"Select1\");\nresetWidget(\"Input1\");\nresetWidget(\"Input2\");\nresetWidget(\"Input2Copy\");}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,

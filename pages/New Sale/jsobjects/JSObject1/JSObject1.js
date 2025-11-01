@@ -158,14 +158,48 @@ console.log (e)
 	async runSale(){
 
 		try {
-		await this.invoiceDowload();
 		await this.saleToDB ();
+		await this.invoiceDowload();
+		await storeValue('products', []);
+			
+						resetWidget("input_cash");
+						resetWidget("input_card");
+						resetWidget("input_cod");
+						resetWidget("input_exchange_adjustment");
+						resetWidget("Select2");
+						resetWidget("Input1");
+						resetWidget("DatePicker1");
+						resetWidget("cust_address");
+						resetWidget("cust_name");
+						resetWidget("cust_phone");
+						resetWidget("input_bank_transfer");
+						resetWidget("Select1");
+						resetWidget("Select1Copy");
 
 		}
-		catch(e) {
-console.log (e)
-			throw(e);
-		}
+
+				catch(e) {
+				showAlert('Error Processing the Sale', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: Select1.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 		
 }
 	

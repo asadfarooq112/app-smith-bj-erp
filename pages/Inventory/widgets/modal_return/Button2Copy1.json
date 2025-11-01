@@ -32,7 +32,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{invoice_download.refundInvoiceDowload();\nreturn_exhange.processReturn();}}",
+  "onClick": "{{return_exhange.mainFunction();}}",
   "originalBottomRow": 63,
   "originalTopRow": 59,
   "parentId": "ijh0qorjxe",

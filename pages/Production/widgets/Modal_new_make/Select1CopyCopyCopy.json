@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 54,
+  "bottomRow": 52,
   "boxShadow": "none",
   "defaultOptionValue": "Employee",
   "dynamicBindingPathList": [
@@ -56,7 +56,7 @@
   "rightColumn": 24,
   "serverSideFiltering": false,
   "sourceData": "{{employeesCopy.data}}",
-  "topRow": 47,
+  "topRow": 45,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "impasswi7s",

@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 650,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +80,7 @@
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"Select_Employee\");\nresetWidget(\"cust_name\");\nresetWidget(\"cust_phone\");\nresetWidget(\"return_code_select\");\nresetWidget(\"return_metal_weight\");\nresetWidget(\"return_diamond_weight\");\nresetWidget(\"amount_refunded\");\nresetWidget(\"customer_paid\");\nresetWidget(\"return_size\");\nresetWidget(\"Select1\");\nresetWidget(\"Select1Copy\");\nresetWidget(\"Input4\");\nresetWidget(\"Select2\");}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,

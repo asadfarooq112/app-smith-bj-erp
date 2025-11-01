@@ -50,10 +50,29 @@ export default {
 			await alterations.run();
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+
+							catch(e) {
+				showAlert('Error Adding Alteration', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: employeeCopy1.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 	},
 	
 	
@@ -109,9 +128,28 @@ export default {
 			await new_make.run();
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+
+							catch(e) {
+				showAlert('Error Adding Customer Order', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: Select1CopyCopyCopy.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 	}
 }

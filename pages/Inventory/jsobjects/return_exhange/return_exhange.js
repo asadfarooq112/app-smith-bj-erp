@@ -58,12 +58,83 @@ export default {
 			
 
 
+		}
+catch(e) {
+				showAlert('Error while adding return/exchange to database!', 'error');
 
-		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add return/exchange', 
+					event_to: '-', 
+					actor: Select_Employee.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
+	},
+	
+	async refundInvoiceDowload () {
+	
+		try {
+		
+		await refund_invoice_gen_and_email.run();
+		const url = `http://178.156.165.247:8080${refund_invoice_gen_and_email.data.url_path}`;
+		
+		console.log(url);
+		
+    showModal(Modal2.name);
+		
 	}
-}
+		catch (e) {
+    console.log("Return/exchange invoice creation error:", e.message);
+    throw e; 
+		
+	}
+	
+	
+},
+	
+	
+	async mainFunction() {
+		
+		try{
+		await this.processReturn();
+		await this.refundInvoiceDowload();
+			
+		}
+		catch(e) {
+				showAlert('Error in Processing Return/Exchange', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add return/exchange', 
+					event_to: '-', 
+					actor: Select_Employee.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
+	}
+		
+	}
 	

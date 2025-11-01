@@ -57,6 +57,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClose"
@@ -75,7 +80,7 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 42,
   "needsErrorInfo": false,
-  "onClose": "{{cash_transactions.run();\nfinancial_transactions.run()}}",
+  "onClose": "{{cash_transactions.run();\nfinancial_transactions.run();\nresetWidget(\"employeeCopy1\");\nresetWidget(\"amountINCopy\");\nresetWidget(\"Select1Copy1\");\nresetWidget(\"Input1Copy1\");\nresetWidget(\"Select2\");\nresetWidget(\"Input2\");\n}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 360,
+  "bottomRow": 36,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 360,
   "isCanvas": true,
   "isLoading": false,
@@ -64,12 +74,13 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 330,
+  "minHeight": 360,
   "mobileBottomRow": 0,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"input_cust_name\");\nresetWidget(\"input_cust_phone\");\nresetWidget(\"input_cust_address\");\nresetWidget(\"employee_adding_customer\")\n}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,

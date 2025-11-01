@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 710,
+  "bottomRow": 71,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 710,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +80,7 @@
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"Input4\");\nresetWidget(\"Input4Copy\");\nresetWidget(\"Input5\");\nresetWidget(\"Input6\");\n}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,

@@ -44,11 +44,29 @@ export default {
 
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
-	}
+
+					catch(e) {
+				showAlert('Error Adding New Customer!', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend insert customer page', 
+					event_to: '-', 
+					actor: employee_adding_customer.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 
 
 }

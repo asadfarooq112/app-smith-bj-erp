@@ -49,10 +49,28 @@ export default {
 
 		}
 
-		catch(e) {
-			console.log(e?.message);
-			throw(e);
-		}
+					catch(e) {
+				showAlert('Error Editing Inventory!', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend edit inventory', 
+					event_to: '-', 
+					actor: Select1CopyCopy1.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 
 	},
 
@@ -97,15 +115,37 @@ export default {
 			showAlert(`Inserted: ${payload_data}`);
 			console.log(payload_data);
 
+			
 			await join_inventory_sku.run();
 
 
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+
+catch(e) {
+				showAlert('Error inserting Inventory!', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add inventory', 
+					event_to: '-', 
+					actor: Select1CopyCopy.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
+		
+		
 	}
 
 

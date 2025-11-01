@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 480,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +80,7 @@
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClose": "{{\t\t\t\t\tresetWidget(\"Select1CopyCopy\");\n\t\t\t\t\tresetWidget(\"code_select_add\");\n\t\t\t\t\tresetWidget(\"Input2\");\n\t\t\t\t\tresetWidget(\"Input3\");\n\t\t\t\t\tresetWidget(\"Input_1\");}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,

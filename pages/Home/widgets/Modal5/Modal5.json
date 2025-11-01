@@ -29,7 +29,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 540,
+      "minHeight": 580,
       "minWidth": 450,
       "mobileBottomRow": 240,
       "mobileLeftColumn": 0,
@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 580,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +80,7 @@
   "mobileRightColumn": 33,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"Select1Copy\");\nresetWidget(\"Input3\");\nresetWidget(\"Input3Copy3\");\nresetWidget(\"Input3Copy2\");\nresetWidget(\"Input3Copy2Copy\");\nresetWidget(\"Input3Copy2CopyCopy\");\nresetWidget(\"Input3Copy1\");\nresetWidget(\"Input3Copy\");\nresetWidget(\"Input4\");\n}}",
   "parentColumnSpace": 16.59375,
   "parentId": "0",
   "parentRowSpace": 10,

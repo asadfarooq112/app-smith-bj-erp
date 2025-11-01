@@ -53,10 +53,29 @@ async alterationHandover () {
 			await alterations.run();
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+
+						catch(e) {
+				showAlert('Error While Alteration Handover', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: Input4.text,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 	},
 	
 	
@@ -112,10 +131,29 @@ async alterationHandover () {
 			await new_make.run();
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+
+							catch(e) {
+				showAlert('Error While NewMake Hangover', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: Input4Copy1.text,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 	},
 	
 	
@@ -185,9 +223,27 @@ showModal(Modal_replenishment_receive.name);
 			await sku_inventory_join.run();
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+					catch(e) {
+				showAlert('Error While Replenishment Handover', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: Input4Copy1Copy.text,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 	}
 }

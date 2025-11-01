@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 404,
+  "bottomRow": 34,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -57,6 +57,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClose"
@@ -75,7 +80,7 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 42,
   "needsErrorInfo": false,
-  "onClose": "{{financial_transactions.run();\ncash_transactions.run()}}",
+  "onClose": "{{financial_transactions.run();\ncash_transactions.run();\nresetWidget(\"employeeCopyCopy\");\nresetWidget(\"amount_due_receive\");\nresetWidget(\"method_due_receive\");\nresetWidget(\"Input1CopyCopy\");\n}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

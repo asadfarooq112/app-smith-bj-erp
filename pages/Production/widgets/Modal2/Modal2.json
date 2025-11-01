@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 566,
+  "bottomRow": 54,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 540,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +80,7 @@
   "mobileRightColumn": 26,
   "mobileTopRow": 26,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"code_select_add\");\nresetWidget(\"Select1CopyCopy\");\nresetWidget(\"Select1\");\nresetWidget(\"DatePicker1\");\nresetWidget(\"Input1\");\nresetWidget(\"Input2\");\nresetWidget(\"Input3\");\n}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

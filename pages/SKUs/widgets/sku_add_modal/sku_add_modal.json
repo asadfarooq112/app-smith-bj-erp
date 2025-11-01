@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 500,
   "isCanvas": true,
   "isLoading": false,
@@ -69,6 +79,7 @@
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "onClose": "{{\t\t\t\t\t\tresetWidget(\"newSku_category\");\n\t\t\t\t\t\tresetWidget(\"newSku_cost\");\n\t\t\t\t\t\tresetWidget(\"newSku_Dqty\");\n\t\t\t\t\t\tresetWidget(\"newSku_metalType\");\n\t\t\t\t\t\tresetWidget(\"newSku_retail\");\n\t\t\t\t\t\tresetWidget(\"newSku_img\");\n\t\t\t\t\t\tresetWidget(\"newSku_minQty\");\n\t\t\t\t\t\tresetWidget(\"newSku_code\");\n\t\t\t\t\t\tresetWidget(\"Select1\");\n\t\t\t\t\t\tresetWidget(\"Select1Copy1\");\n}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,

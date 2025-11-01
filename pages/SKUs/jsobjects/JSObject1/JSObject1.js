@@ -52,10 +52,28 @@ export default {
 			await sku.run();
 
 		}
-		catch (e) {
-			console.log(e?.message);
-			throw(e);
-		}
+		catch(e) {
+				showAlert('Error Adding SKU', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend add sku', 
+					event_to: '-', 
+					actor: Select1.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 	},
 	
 	async editSKU () {
@@ -118,9 +136,27 @@ export default {
 		}
 
 		catch(e) {
-			console.log(e?.message);
-			throw(e);
-		}
+				showAlert('Error Editing SKU', 'error');
+
+				const errorInfo = {
+					name: e?.name || "UnknownError",
+					message: e?.message || JSON.stringify(e),
+					stack: e?.stack || "No stack trace"
+				};
+
+				const payloadString = JSON.stringify(errorInfo);
+
+				event_insert.run({
+					event: 'error', 
+					event_from: 'appsmith frontend edit SKU', 
+					event_to: '-', 
+					actor: Select1Copy.selectedOptionValue,
+					payload: payloadString
+
+				})
+
+				throw(e);
+			}
 
 	}
 

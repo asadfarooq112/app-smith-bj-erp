@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 240,
   "isCanvas": true,
   "isLoading": false,
@@ -69,6 +79,7 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 42,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"employee\");\nresetWidget(\"amountIN\");\nresetWidget(\"Select1\");\nresetWidget(\"Input1\");\n}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

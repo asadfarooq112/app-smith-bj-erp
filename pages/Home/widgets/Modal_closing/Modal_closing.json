@@ -57,6 +57,16 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 630,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +80,7 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 148,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"Select_EmployeeCopy\");\nresetWidget(\"Input5\");\nresetWidget(\"Input5Copy2\");\nresetWidget(\"Input5Copy1\");\nresetWidget(\"Input5Copy\");\nresetWidget(\"Input6\");\n}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

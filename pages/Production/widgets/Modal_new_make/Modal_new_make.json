@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 774,
+  "bottomRow": 54,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 560,
+      "bottomRow": 540,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -57,19 +57,30 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "height": 560,
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "height": 540,
   "isCanvas": true,
   "isLoading": false,
   "key": "npw4wmgmdk",
   "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 560,
+  "minHeight": 540,
   "mobileBottomRow": 50,
   "mobileLeftColumn": 2,
   "mobileRightColumn": 26,
   "mobileTopRow": 26,
   "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"code_select_addCopy\");\nresetWidget(\"Select1CopyCopyCopy\");\nresetWidget(\"DatePicker1Copy\");\nresetWidget(\"Input1Copy\");\nresetWidget(\"Input2Copy\");\nresetWidget(\"Input3Copy\");\n}}",
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,
