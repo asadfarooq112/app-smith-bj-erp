@@ -86,7 +86,7 @@ async expenseMake () {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend finance page expense make', 
 					event_to: '-', 
 					actor: employeeCopy1.selectedOptionValue,
 					payload: payloadString

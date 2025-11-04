@@ -72,7 +72,7 @@ catch(e) {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add return/exchange', 
+					event_from: 'appsmith frontend inventory page add return/exchange', 
 					event_to: '-', 
 					actor: Select_Employee.selectedOptionValue,
 					payload: payloadString
@@ -96,7 +96,7 @@ catch(e) {
 		
 	}
 		catch (e) {
-    console.log("Return/exchange invoice creation error:", e.message);
+    console.log("refund invoice creation error:", e.message);
     throw e; 
 		
 	}
@@ -113,7 +113,7 @@ catch(e) {
 			
 		}
 		catch(e) {
-				showAlert('Error in Processing Return/Exchange', 'error');
+				showAlert('Error in Adding Sale', 'error');
 
 				const errorInfo = {
 					name: e?.name || "UnknownError",
@@ -125,7 +125,7 @@ catch(e) {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add return/exchange', 
+					event_from: 'appsmith frontend inventory page add return/exchange', 
 					event_to: '-', 
 					actor: Select_Employee.selectedOptionValue,
 					payload: payloadString

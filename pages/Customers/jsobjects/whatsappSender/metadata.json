@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_9800c760-267d-4047-8f3e-ab554955bd03",
+  "id": "Customers_whatsappSender",
+  "unpublishedCollection": {
+    "name": "whatsappSender",
+    "pageId": "Customers",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

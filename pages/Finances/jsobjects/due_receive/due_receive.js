@@ -90,7 +90,7 @@ export default {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend finance page due receive', 
 					event_to: '-', 
 					actor: employeeCopyCopy.selectedOptionValue,
 					payload: payloadString

@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 360,
+  "bottomRow": 42,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 360,
+      "bottomRow": 420,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -25,11 +25,11 @@
       "isDisabled": false,
       "isLoading": false,
       "isVisible": true,
-      "key": "62jo1x2193",
+      "key": "ugjv1jsh6n",
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 260,
+      "minHeight": 240,
       "minWidth": 450,
       "mobileBottomRow": 0,
       "mobileLeftColumn": 0,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "a5suw8q663",
+      "parentId": "x8kmxyx3r5",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "yqbww2pmgm",
-      "widgetName": "Canvas1"
+      "widgetId": "tlz541poxf",
+      "widgetName": "Canvas2"
     }
   ],
   "detachFromLayout": true,
@@ -67,20 +67,20 @@
       "key": "onClose"
     }
   ],
-  "height": 360,
+  "height": 420,
   "isCanvas": true,
   "isLoading": false,
-  "key": "w50k12jf44",
+  "key": "h35mgl9zoc",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 360,
+  "minHeight": 420,
   "mobileBottomRow": 0,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClose": "{{resetWidget(\"input_cust_name\");\nresetWidget(\"input_cust_phone\");\nresetWidget(\"input_cust_address\");\nresetWidget(\"employee_adding_customer\")\n}}",
+  "onClose": "{{resetWidget(\"Input1\");\nresetWidget(\"Select1\");\nresetWidget(\"FilePicker1\")}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,
@@ -90,7 +90,7 @@
   "topRow": 0,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "a5suw8q663",
-  "widgetName": "add_customer",
-  "width": 560
+  "widgetId": "x8kmxyx3r5",
+  "widgetName": "Modal1",
+  "width": 752
 }

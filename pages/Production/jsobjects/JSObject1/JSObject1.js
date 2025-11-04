@@ -64,9 +64,9 @@ export default {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend production page add alteration', 
 					event_to: '-', 
-					actor: employeeCopy1.selectedOptionValue,
+					actor: Select1CopyCopy.selectedOptionValue,
 					payload: payloadString
 
 				})
@@ -142,7 +142,7 @@ export default {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend production page add customer order', 
 					event_to: '-', 
 					actor: Select1CopyCopyCopy.selectedOptionValue,
 					payload: payloadString

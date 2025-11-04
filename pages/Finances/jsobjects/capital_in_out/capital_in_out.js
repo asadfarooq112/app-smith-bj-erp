@@ -75,7 +75,7 @@ export default {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend finance page capital in', 
 					event_to: '-', 
 					actor: employee.selectedOptionValue,
 					payload: payloadString
@@ -163,7 +163,7 @@ export default {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend finance page capital out', 
 					event_to: '-', 
 					actor: employeeCopy.selectedOptionValue,
 					payload: payloadString

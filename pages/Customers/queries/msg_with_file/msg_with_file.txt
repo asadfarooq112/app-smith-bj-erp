@@ -1,0 +1,8 @@
+{
+	"country_code": {{Select2.selectedOptionValue}},
+	"receiver": {{Text4Copy.text}},
+	"text": "{{Input1.text}}",
+	"attachment_type": {{Select1.selectedOptionLabel}},
+	"file_base_64": {{FilePicker1.files[0].data}},
+	"file_name": {{FilePicker1.files[0].name}}
+}

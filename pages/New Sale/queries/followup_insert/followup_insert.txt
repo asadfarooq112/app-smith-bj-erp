@@ -1,4 +1,4 @@
-INSERT INTO bj.followup (branch_id, customer_name, sale_id, action, date, comment)
+INSERT INTO bj.followup (branch_id, customer_name, sale_id, action, date, comment, phone)
 
 VALUES (
 'a758efa5-39c1-4a52-a27b-55b8cc979487',
@@ -6,5 +6,6 @@ VALUES (
 	{{appsmith.store.sale_uuid}},
 	{{Select2.selectedOptionValue}},
 	{{DatePicker1.formattedDate}},
-	{{Input1.text}}
+	{{Input1.text}},
+	{{Table1.selectedRow.phone}}
 )

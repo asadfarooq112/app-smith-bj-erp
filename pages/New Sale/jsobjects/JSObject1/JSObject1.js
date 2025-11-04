@@ -191,7 +191,7 @@ console.log (e)
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend new sale page', 
 					event_to: '-', 
 					actor: Select1.selectedOptionValue,
 					payload: payloadString

@@ -67,7 +67,7 @@ async alterationHandover () {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend production page alteration handover', 
 					event_to: '-', 
 					actor: Input4.text,
 					payload: payloadString
@@ -145,7 +145,7 @@ async alterationHandover () {
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend production page newmake handover', 
 					event_to: '-', 
 					actor: Input4Copy1.text,
 					payload: payloadString
@@ -236,7 +236,7 @@ showModal(Modal_replenishment_receive.name);
 
 				event_insert.run({
 					event: 'error', 
-					event_from: 'appsmith frontend add sku', 
+					event_from: 'appsmith frontend production page replenishment handover', 
 					event_to: '-', 
 					actor: Input4Copy1Copy.text,
 					payload: payloadString
