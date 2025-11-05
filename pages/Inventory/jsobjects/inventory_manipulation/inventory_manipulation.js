@@ -8,7 +8,7 @@ export default {
 
 								const payload_data = `Code: ${Text2.text}, Size: ${input_edit_size.text}, Metal Weight ${input_edit_metal_w.text}, Diamond Weight ${input_edit_diamond_w.text}`;
 				
-				Promise.all([
+				await Promise.all([
 					
 						
 				update_inventory.run(),
@@ -83,7 +83,7 @@ export default {
 			const payload_data = `Code: ${code_select_add.selectedOptionValue}, Size: ${Input_1.text}, Metal Weight ${Input2.text}, Diamond Weight ${Input3.text}`;
 
 			
-			Promise.all([
+			await Promise.all([
 				
 			insert_new_inventory.run(),
 

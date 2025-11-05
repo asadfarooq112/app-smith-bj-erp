@@ -34,23 +34,25 @@
   "columnOrder": [
     "created_at",
     "employee_name",
-    "employee_id",
-    "id",
     "objection_reason",
     "objection_resolution",
     "name",
     "phone",
-    "customColumn1"
+    "customColumn2",
+    "customColumn1",
+    "employee_id",
+    "id"
   ],
-  "columnUpdatedAt": 1757844410488,
+  "columnUpdatedAt": 1762277306650,
   "columnWidthMap": {
     "created_at": 134,
+    "customColumn2": 68,
     "date_added": 145,
     "employee_name": 106,
     "name": 116,
-    "objection_reason": 246,
-    "objection_resolution": 203,
-    "phone": 172
+    "objection_reason": 234,
+    "objection_resolution": 193,
+    "phone": 122
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -105,6 +107,15 @@
     },
     {
       "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn2.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn2.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn2.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -115,6 +126,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -210,6 +224,45 @@
       "notation": "standard",
       "onClick": "{{showModal(Modal3.name);}}",
       "originalId": "customColumn1",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn2": {
+      "alias": "Msg",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "mobile-phone",
+      "id": "customColumn2",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Msg",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{showModal(Modal1Copy.name);}}",
+      "originalId": "customColumn2",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
