@@ -1,8 +1,16 @@
 SELECT
-  COALESCE(SUM(amount), 0) AS net_sales
-FROM
-  bj.financial_transactions
-WHERE
-  type IN ('sale', 'exchange')
-  AND date_added >= (CURRENT_DATE AT TIME ZONE 'Asia/Karachi')
-  AND date_added < ((CURRENT_DATE + INTERVAL '1 day') AT TIME ZONE 'Asia/Karachi');
+  COALESCE((
+    SELECT SUM(total_charged)
+    FROM bj.sales
+    WHERE date_added >= (CURRENT_DATE AT TIME ZONE 'Asia/Karachi')
+      AND date_added < ((CURRENT_DATE + INTERVAL '1 day') AT TIME ZONE 'Asia/Karachi')
+  ), 0)
+  +
+  COALESCE((
+    SELECT SUM(amount)
+    FROM bj.financial_transactions
+    WHERE type = 'exchange'
+      AND date_added >= (CURRENT_DATE AT TIME ZONE 'Asia/Karachi')
+      AND date_added < ((CURRENT_DATE + INTERVAL '1 day') AT TIME ZONE 'Asia/Karachi')
+  ), 0)
+  AS total_today;

@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 22,
   "shouldTruncate": false,
-  "text": "{{today_net_sale.data[0].net_sales}}",
+  "text": "{{today_net_sale.data[0].total_today}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 11,
