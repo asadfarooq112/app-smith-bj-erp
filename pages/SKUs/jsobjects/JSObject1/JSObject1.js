@@ -16,7 +16,7 @@ export default {
 			Supplier: ${Select1Copy1.selectedOptionValue}
 			`;
 			
-			Promise.all([
+			await Promise.all([
 				
 			sku_insert.run(),
 			
@@ -95,7 +95,7 @@ export default {
 			`;
 
 				
-				Promise.all([
+			await Promise.all([
 					
 			sku_update.run(),
 

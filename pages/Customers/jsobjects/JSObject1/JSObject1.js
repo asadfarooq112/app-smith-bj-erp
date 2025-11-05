@@ -7,7 +7,7 @@ export default {
 						const payload_data = `Name: ${input_cust_name.text}, Phone: ${input_cust_phone.text}, Address: ${input_cust_address.text} `;
 			
 			
-			Promise.all([
+			await Promise.all([
 				
 			customer_add.run(),
 

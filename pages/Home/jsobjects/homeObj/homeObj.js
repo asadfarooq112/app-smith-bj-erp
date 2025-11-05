@@ -4,7 +4,7 @@ export default {
 	
 		try {
 			
-		Promise.all([
+		await Promise.all([
 			
 				
 

@@ -28,7 +28,7 @@ showAlert('Enter Customer Name or Phone');
 			
 		const payload_data = `Name: ${cust_name.text}, Phone: ${cust_phone.text}, Address: ${cust_address.text} `;
 
-		Promise.all([
+		await Promise.all([
 			
 			customer_add.run(),
 
