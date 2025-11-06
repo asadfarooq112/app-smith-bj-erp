@@ -3,8 +3,8 @@ export default {
 	async addAlteration () {
 		try {
 
-			
-			
+
+
 			const payload_data = `
 			Code: ${code_select_add.selectedOptionValue}, 
 			Type: Alteration,
@@ -12,11 +12,11 @@ export default {
 			Customer: ${Input3.text},
 			Employee: ${Select1CopyCopy.selectedOptionValue}
 			`;
-			
+
 			await Promise.all([
-				
+
 				insert_alteration.run(),
-			
+
 				//db event
 				event_insert.run({
 					event: 'db.insert', 
@@ -34,15 +34,15 @@ export default {
 					actor: Select1CopyCopy.selectedOptionValue, 
 					payload: payload_data
 				})
-			
-				
-				
-			])
-				
 
-			
-			
-			
+
+
+			])
+
+
+
+
+
 
 			closeModal(Modal2.name);
 			showAlert(`New Alteration: ${payload_data}`);
@@ -51,16 +51,18 @@ export default {
 
 		}
 
-							catch(e) {
-				showAlert('Error Adding Alteration', 'error');
+		catch(e) {
+			showAlert('Error Adding Alteration', 'error');
 
-				const errorInfo = {
-					name: e?.name || "UnknownError",
-					message: e?.message || JSON.stringify(e),
-					stack: e?.stack || "No stack trace"
-				};
+			const errorInfo = {
+				name: e?.name || "UnknownError",
+				message: e?.message || JSON.stringify(e),
+				stack: e?.stack || "No stack trace"
+			};
 
-				const payloadString = JSON.stringify(errorInfo);
+			const payloadString = JSON.stringify(errorInfo);
+
+			await Promise.all([
 
 				event_insert.run({
 					event: 'error', 
@@ -69,32 +71,38 @@ export default {
 					actor: Select1CopyCopy.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
 
-				throw(e);
-			}
+				whatsapp_error.run({receiver: '03244811332', text: payloadString})
+
+
+			])
+
+
+			throw(e);
+		}
 	},
-	
-	
-	
-	
-	
+
+
+
+
+
 	async addNewMake () {
 		try {
 
-			
-			
+
+
 			const payload_data = `
 			Code: ${code_select_addCopy.selectedOptionValue}, 
 			Type: New Make (customer new order),
 			Customer: ${Input3Copy.text},
 			Employee: ${Select1CopyCopyCopy.selectedOptionValue}
 			`;
-			
+
 			await Promise.all([
-			
-			await insert_new_make.run(),
-			
+
+				await insert_new_make.run(),
+
 				//db event
 				event_insert.run({
 					event: 'db.insert', 
@@ -112,15 +120,15 @@ export default {
 					actor: Select1CopyCopyCopy.selectedOptionValue, 
 					payload: payload_data
 				})
-			
-				
-				
-			])
-				
 
-			
-			
-			
+
+
+			])
+
+
+
+
+
 
 			closeModal(Modal_new_make.name);
 			showAlert(`New Customer Order: ${payload_data}`);
@@ -129,16 +137,20 @@ export default {
 
 		}
 
-							catch(e) {
-				showAlert('Error Adding Customer Order', 'error');
+		catch(e) {
+			showAlert('Error Adding Customer Order', 'error');
 
-				const errorInfo = {
-					name: e?.name || "UnknownError",
-					message: e?.message || JSON.stringify(e),
-					stack: e?.stack || "No stack trace"
-				};
+			const errorInfo = {
+				name: e?.name || "UnknownError",
+				message: e?.message || JSON.stringify(e),
+				stack: e?.stack || "No stack trace"
+			};
 
-				const payloadString = JSON.stringify(errorInfo);
+			const payloadString = JSON.stringify(errorInfo);
+
+
+			await Promise.all([
+
 
 				event_insert.run({
 					event: 'error', 
@@ -147,9 +159,15 @@ export default {
 					actor: Select1CopyCopyCopy.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
 
-				throw(e);
-			}
+				whatsapp_error.run({receiver: '03244811332', text: payloadString})
+
+
+			])
+
+
+			throw(e);
+		}
 	}
 }

@@ -34,7 +34,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{whatsappSender.followUpSender();}}",
+  "onClick": "{{whatsappSender.nonConvertedSender();}}",
   "originalBottomRow": 39,
   "originalTopRow": 35,
   "parentId": "3bcri6ztq9",

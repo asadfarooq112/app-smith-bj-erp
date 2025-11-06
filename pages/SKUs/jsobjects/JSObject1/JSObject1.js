@@ -63,6 +63,8 @@ export default {
 
 				const payloadString = JSON.stringify(errorInfo);
 
+			await Promise.all([
+				
 				event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend add sku', 
@@ -70,7 +72,13 @@ export default {
 					actor: Select1.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
+					
+					whatsapp_error.run({receiver: '03244811332', text: payloadString})
+					
+					
+				])
+
 
 				throw(e);
 			}
@@ -146,6 +154,8 @@ export default {
 
 				const payloadString = JSON.stringify(errorInfo);
 
+			await Promise.all([
+				
 				event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend edit SKU', 
@@ -153,7 +163,13 @@ export default {
 					actor: Select1Copy.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
+					
+					whatsapp_error.run({receiver: '03244811332', text: payloadString})
+					
+					
+				])
+
 
 				throw(e);
 			}

@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 57,
   "shouldTruncate": false,
-  "text": "{{Table3.triggeredRow.phone}}",
+  "text": "{{Table2.triggeredRow.phone}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 6,

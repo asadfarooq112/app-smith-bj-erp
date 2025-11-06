@@ -88,6 +88,8 @@ export default {
 
 				const payloadString = JSON.stringify(errorInfo);
 
+							await Promise.all([
+								
 				event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend finance page due receive', 
@@ -95,7 +97,13 @@ export default {
 					actor: employeeCopyCopy.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
+					
+					whatsapp_error.run({receiver: '03244811332', text: payloadString})
+					
+					
+				])
+
 
 				throw(e);
 			}

@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_2dca9ca9-07ef-466e-845c-e72e0418b229",
-  "id": "Home_non_conv_msg_with_fileCopy",
+  "gitSyncId": "68b6eff59289a93060f5089f_b5692c59-2494-43a6-9b65-1f91cf814f69",
+  "id": "New Sale_whatsapp_error",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n\t\"country_code\": {{Select2Copy.selectedOptionValue}},\n\t\"receiver\": {{Text4CopyCopy.text}},\n\t\"text\": \"{{Input1Copy1.text}}\",\n\t\"attachment_type\": {{Select1Copy1.selectedOptionLabel}},\n\t\"file_base_64\": {{FilePicker1Copy.files[0].data}},\n\t\"file_name\": {{FilePicker1Copy.files[0].name}}\n}",
+      "body": "{\n\t\"country_code\": \"+92\",\n\t\"receiver\": {{this.params.receiver}},\n\t\"text\": \"{{this.params.text}}\"\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {
@@ -44,8 +44,8 @@
         "key": "body"
       }
     ],
-    "name": "non_conv_msg_with_fileCopy",
-    "pageId": "Home",
+    "name": "whatsapp_error",
+    "pageId": "New Sale",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

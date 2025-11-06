@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 23,
   "shouldTruncate": false,
-  "text": "{{Table3.triggeredRow.name}}",
+  "text": "{{Table2.triggeredRow.customer_name}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 6,

@@ -51,14 +51,25 @@ export default {
 
 				const payloadString = JSON.stringify(errorInfo);
 
-				event_insert.run({
+				await Promise.all([
+					
+					event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend attendance', 
 					event_to: '-', 
 					actor: Select_Employee.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
+					
+					whatsapp_error.run({receiver: '03244811332', text: payloadString})
+					
+					
+				])
+				
+				
+				
+				
 
 				throw(e);
 			}

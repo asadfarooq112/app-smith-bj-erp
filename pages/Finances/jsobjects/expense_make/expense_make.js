@@ -84,6 +84,8 @@ async expenseMake () {
 
 				const payloadString = JSON.stringify(errorInfo);
 
+						await Promise.all([
+							
 				event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend finance page expense make', 
@@ -91,7 +93,13 @@ async expenseMake () {
 					actor: employeeCopy1.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
+					
+					whatsapp_error.run({receiver: '03244811332', text: payloadString})
+					
+					
+				])
+
 
 				throw(e);
 			}

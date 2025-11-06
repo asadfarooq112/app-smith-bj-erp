@@ -1,0 +1,5 @@
+{
+	"country_code": {{Select2CopyCopy.selectedOptionValue}},
+	"receiver": {{Text4CopyCopyCopy.text}},
+	"text": "{{Input1Copy1Copy.text}}"
+}

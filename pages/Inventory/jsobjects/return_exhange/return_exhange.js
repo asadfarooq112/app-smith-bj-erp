@@ -69,7 +69,8 @@ catch(e) {
 				};
 
 				const payloadString = JSON.stringify(errorInfo);
-
+				
+		await Promise.all([
 				event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend inventory page add return/exchange', 
@@ -77,7 +78,12 @@ catch(e) {
 					actor: Select_Employee.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
+					
+					whatsapp_error.run({receiver: '03244811332', text: payloadString})
+					
+					
+				])
 
 				throw(e);
 			}
@@ -123,6 +129,9 @@ catch(e) {
 
 				const payloadString = JSON.stringify(errorInfo);
 
+			
+			await Promise.all([
+				
 				event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend inventory page add return/exchange', 
@@ -130,7 +139,12 @@ catch(e) {
 					actor: Select_Employee.selectedOptionValue,
 					payload: payloadString
 
-				})
+				}),
+					
+					whatsapp_error.run({receiver: '03244811332', text: payloadString})
+					
+					
+				])
 
 				throw(e);
 			}

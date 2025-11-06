@@ -1,0 +1,5 @@
+{
+	"country_code": "+92",
+	"receiver": {{this.params.receiver}},
+	"text": "{{this.params.text}}"
+}
