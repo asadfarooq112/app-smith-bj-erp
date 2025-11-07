@@ -45,7 +45,7 @@
     "customColumn1",
     "customColumn3"
   ],
-  "columnUpdatedAt": 1762278087862,
+  "columnUpdatedAt": 1762537530948,
   "columnWidthMap": {
     "action": 97,
     "comment": 447,
@@ -165,8 +165,8 @@
   "mobileRightColumn": 35,
   "mobileTopRow": 77,
   "needsErrorInfo": false,
-  "originalBottomRow": 190,
-  "originalTopRow": 162,
+  "originalBottomRow": 204,
+  "originalTopRow": 165,
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

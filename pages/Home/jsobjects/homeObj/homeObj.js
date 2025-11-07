@@ -4,6 +4,13 @@ export default {
 	
 		try {
 			
+		if (!Select_Employee.selectedOptionValue) {
+
+			showAlert("Select Employee", "error");
+}
+			
+			else {
+			
 		await Promise.all([
 			
 				
@@ -37,7 +44,7 @@ export default {
 		showAlert(`${Select_Employee.selectedOptionValue} Attendance Marked`);
 		closeModal(Attendance_Modal.name);
 			resetWidget("Select_Employee");
-			
+			}	
 }
 		
 			catch(e) {

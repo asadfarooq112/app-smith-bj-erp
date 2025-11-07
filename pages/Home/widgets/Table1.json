@@ -42,7 +42,7 @@
     "customColumn1",
     "sale_id"
   ],
-  "columnUpdatedAt": 1759768095849,
+  "columnUpdatedAt": 1762537530934,
   "columnWidthMap": {
     "amount_due": 129,
     "date_added": 151,
@@ -136,6 +136,8 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 30,
   "needsErrorInfo": false,
+  "originalBottomRow": 157,
+  "originalTopRow": 90,
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

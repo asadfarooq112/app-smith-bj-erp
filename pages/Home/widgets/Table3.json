@@ -43,7 +43,7 @@
     "employee_id",
     "id"
   ],
-  "columnUpdatedAt": 1762277306650,
+  "columnUpdatedAt": 1762537530920,
   "columnWidthMap": {
     "created_at": 134,
     "customColumn2": 68,
@@ -152,6 +152,8 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
+  "originalBottomRow": 80,
+  "originalTopRow": 27,
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

@@ -12,16 +12,23 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{!!(\n(Table1.selectedRow.name == null || Table1.selectedRow.name === '') ||\n(Select1.selectedOptionValue == null || Select1.selectedOptionValue === '') ||\n(Select1Copy.selectedOptionValue == null || Select1Copy.selectedOptionValue === '') \n\n\n)}}",
   "isLoading": false,
   "isVisible": true,
   "key": "hee7cegqgw",

@@ -13,6 +13,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -21,7 +29,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{!!(\n(Table1Copy.selectedRow.name == null || Table1Copy.selectedRow.name === '') || \n(Select_Employee.selectedOptionValue == null || Select_Employee.selectedOptionValue === '') || \n\t(return_code_select.selectedOptionValue == null || return_code_select.selectedOptionValue === '') ||\n\t(return_size.text == null || return_size.text === '')  ||\n\n\n\t \t(return_metal_weight.text == null || return_metal_weight.text === '')  ||\n\n\t(return_diamond_weight.text == null || return_diamond_weight.text === '')  ||\n\n\t(Select2.selectedOptionValue == null || Select2.selectedOptionValue === '')  ||\n\n\t(Select1.selectedOptionValue == null || Select1.selectedOptionValue === '')  ||\n\n\t(Select1Copy.selectedOptionValue == null || Select1Copy.selectedOptionValue === '')  ||\n\t\t(customer_paid.text == null || customer_paid.text === '')  ||\n\t\t(amount_refunded.text == null || amount_refunded.text === '')  \n\n)}}",
   "isLoading": false,
   "isVisible": true,
   "key": "frovhr960v",

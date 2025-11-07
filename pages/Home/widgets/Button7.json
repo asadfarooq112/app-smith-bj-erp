@@ -32,6 +32,8 @@
   "mobileTopRow": 18,
   "needsErrorInfo": false,
   "onClick": "{{navigateTo('New Sale', {}, 'SAME_WINDOW');}}",
+  "originalBottomRow": 90,
+  "originalTopRow": 84,
   "parentColumnSpace": 16.6875,
   "parentId": "0",
   "parentRowSpace": 10,

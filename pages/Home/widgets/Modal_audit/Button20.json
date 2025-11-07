@@ -13,6 +13,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -21,7 +29,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{!(Select_EmployeeCopy1.selectedOptionValue && FilePicker2.files[0])}}",
   "isLoading": false,
   "isVisible": true,
   "key": "1v19fm2qjr",

@@ -13,6 +13,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -21,7 +29,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{!!(\n\t(Select1Copy.selectedOptionValue == null ||\n\t Select1Copy.selectedOptionValue == '') ||\n\t(Input3.text == null || Input3.text === '') ||\n\t(Input3Copy.text == null || Input3Copy.text === '') ||\n\t(Input3Copy3.text == null || Input3Copy3.text === '') ||\n\t(Input3Copy1.text == null || Input3Copy1.text === '') ||\n\t(Input3Copy2.text == null || Input3Copy2.text === '') ||(Input3Copy2Copy.text == null || Input3Copy2Copy.text === '') ||(Input3Copy2CopyCopy.text == null || Input3Copy2CopyCopy.text === '') ||\n(!FilePicker1.files[0])\n) \n}}",
   "isLoading": false,
   "isVisible": true,
   "key": "yht295762l",
