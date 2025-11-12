@@ -1,14 +1,14 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 420,
+  "bottomRow": 410,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 420,
+      "bottomRow": 410,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -25,7 +25,7 @@
       "isDisabled": false,
       "isLoading": false,
       "isVisible": true,
-      "key": "ugjv1jsh6n",
+      "key": "83qs8yv49m",
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
@@ -37,7 +37,7 @@
       "mobileTopRow": 0,
       "needsErrorInfo": false,
       "parentColumnSpace": 1,
-      "parentId": "x8kmxyx3r5",
+      "parentId": "q76lzv2pts",
       "parentRowSpace": 1,
       "renderMode": "CANVAS",
       "responsiveBehavior": "fill",
@@ -46,8 +46,8 @@
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
-      "widgetId": "tlz541poxf",
-      "widgetName": "Canvas2"
+      "widgetId": "i5tikxn9m3",
+      "widgetName": "Canvas3"
     }
   ],
   "detachFromLayout": true,
@@ -57,30 +57,19 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClose"
-    }
-  ],
-  "dynamicTriggerPathList": [
-    {
-      "key": "onClose"
-    }
-  ],
-  "height": 420,
+  "height": 410,
   "isCanvas": true,
   "isLoading": false,
-  "key": "h35mgl9zoc",
+  "key": "jhfhp3lzq0",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 24,
-  "minHeight": 420,
+  "minHeight": 240,
   "mobileBottomRow": 0,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 0,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClose": "{{resetWidget(\"Input1\");\nresetWidget(\"Select1\");\nresetWidget(\"FilePicker1\")}}",
   "parentColumnSpace": 1,
   "parentId": "0",
   "parentRowSpace": 1,
@@ -90,7 +79,7 @@
   "topRow": 0,
   "type": "MODAL_WIDGET",
   "version": 2,
-  "widgetId": "x8kmxyx3r5",
-  "widgetName": "Modal1",
-  "width": 752
+  "widgetId": "q76lzv2pts",
+  "widgetName": "Modal2",
+  "width": 962
 }
