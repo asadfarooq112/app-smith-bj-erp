@@ -40,7 +40,7 @@
     "customColumn1",
     "customColumn2"
   ],
-  "columnUpdatedAt": 1762962442679,
+  "columnUpdatedAt": 1762963261708,
   "columnWidthMap": {
     "address": 470,
     "customColumn1": 70
@@ -243,7 +243,7 @@
       "label": "Past",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{showModal(Modal2.name);}}",
+      "onClick": "{{showModal(Modal3.name);}}",
       "originalId": "customColumn2",
       "sticky": "",
       "textSize": "0.875rem",
