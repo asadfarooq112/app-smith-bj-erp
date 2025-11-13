@@ -13,7 +13,7 @@
           "value": true
         }
       ],
-      "timeoutInMillisecond": 10000
+      "timeoutInMillisecond": 30000
     },
     "confirmBeforeExecute": false,
     "datasource": {
@@ -22,6 +22,7 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [],
     "name": "Query2",
     "pageId": "Home",
     "runBehaviour": "MANUAL",
