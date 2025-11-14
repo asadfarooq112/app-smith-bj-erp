@@ -46,19 +46,23 @@
     "comment",
     "employee",
     "date_added",
-    "customColumn1"
+    "customColumn1",
+    "customColumn2"
   ],
-  "columnUpdatedAt": 1760282621058,
+  "columnUpdatedAt": 1763143215648,
   "columnWidthMap": {
     "alteration_type": 142,
     "code": 92,
     "comment": 157,
+    "customColumn1": 94,
+    "customColumn2": 89,
     "customer_name": 143,
+    "employee": 112,
     "image": 87,
     "metal_type": 95,
     "new_size": 106.00000000000001,
     "required_date": 135,
-    "type": 171
+    "type": 176
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -131,6 +135,15 @@
     },
     {
       "key": "primaryColumns.date_added.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn2.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn2.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn2.boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -141,6 +154,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.onClick"
     }
   ],
   "enableClientSideSearch": true,
@@ -310,6 +326,46 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "customColumn2": {
+      "alias": "Delete",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "buttonVariant": "TERTIARY",
+      "columnType": "iconButton",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "iconName": "remove",
+      "id": "customColumn2",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Delete",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{showModal(Modal4.name);}}",
+      "originalId": "customColumn2",
+      "sticky": "right",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "customer_name": {
       "alias": "customer_name",
       "allowCellWrapping": false,
@@ -349,7 +405,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "date",
       "computedValue": "{{(() => { const tableData = Table2Copy.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date_added\"])) : date_added })()}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -370,6 +426,7 @@
       "label": "date_added",
       "notation": "standard",
       "originalId": "date_added",
+      "outputFormat": "YYYY-MM-DD HH:mm",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

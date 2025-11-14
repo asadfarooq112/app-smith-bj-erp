@@ -1,0 +1,6 @@
+UPDATE bj.customer
+SET 
+			name = {{Input3.text}}, 
+			phone = {{Input3Copy.text}},
+			address = {{Input3CopyCopy.text}}
+WHERE customer_id = {{Table1.triggeredRow.customer_id}};

@@ -1,0 +1,2 @@
+DELETE FROM bj.alterations_or_new_make
+WHERE id = {{Table2.triggeredRow.id}}
