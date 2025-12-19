@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 210,
+  "bottomRow": 213,
   "boxShadow": "none",
   "buttonColor": "#eab308",
   "buttonVariant": "PRIMARY",
@@ -41,7 +41,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 63,
   "text": "Generate Closing Report",
-  "topRow": 205,
+  "topRow": 208,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "1yaeq830ll",

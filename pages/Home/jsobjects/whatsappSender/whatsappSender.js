@@ -5,13 +5,13 @@ export default {
 		try {
 
 			if(Select1Copy1.selectedOptionValue == "none"  || Select1Copy1.selectedOptionValue == undefined) {
-				await non_conv_msg_only.run();
-				showAlert('Whatsapp Msg Sent', 'success');
+				const status = await non_conv_msg_only.run();
+				showAlert(`Message Success Status: ${status.success}`);
 				closeModal(Modal1Copy.name);
 			}
 			else {
-				await non_conv_msg_with_file.run();
-				showAlert('Whatsapp Msg Sent', 'success');
+				const status = await non_conv_msg_with_file.run();
+				showAlert(`Message Success Status: ${status.success}`);
 				closeModal(Modal1Copy.name);
 			}
 
@@ -56,13 +56,13 @@ export default {
 		try {
 
 			if(Select1Copy1Copy.selectedOptionValue == "none"  || Select1Copy1Copy.selectedOptionValue == undefined) {
-				await followup_msg_only.run();
-				showAlert('Whatsapp Msg Sent', 'success');
+				const status = await followup_msg_only.run();
+				showAlert(`Message Success Status: ${status.success}`);
 				closeModal(Modal1CopyCopy.name);
 			}
 			else {
-				await followup_msg_with_file.run();
-				showAlert('Whatsapp Msg Sent', 'success');
+				const status = await followup_msg_with_file.run();
+				showAlert(`Message Success Status: ${status.success}`);
 				closeModal(Modal1CopyCopy.name);
 			}
 

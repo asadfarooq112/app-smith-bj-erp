@@ -1,7 +1,7 @@
 {
 	"country_code": {{Select2CopyCopy.selectedOptionValue}},
 	"receiver": {{Text4CopyCopyCopy.text}},
-	"text": "{{Input1Copy1Copy.text}}"
+	"text": "{{Input1Copy1Copy.text}}",
 	"attachment_type": {{Select1Copy1Copy.selectedOptionLabel}},
 	"file_base_64": {{FilePicker1CopyCopy.files[0].data}},
 	"file_name": {{FilePicker1CopyCopy.files[0].name}}

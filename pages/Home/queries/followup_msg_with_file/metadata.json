@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n\t\"country_code\": {{Select2CopyCopy.selectedOptionValue}},\n\t\"receiver\": {{Text4CopyCopyCopy.text}},\n\t\"text\": \"{{Input1Copy1Copy.text}}\"\n\t\"attachment_type\": {{Select1Copy1Copy.selectedOptionLabel}},\n\t\"file_base_64\": {{FilePicker1CopyCopy.files[0].data}},\n\t\"file_name\": {{FilePicker1CopyCopy.files[0].name}}\n}",
+      "body": "{\n\t\"country_code\": {{Select2CopyCopy.selectedOptionValue}},\n\t\"receiver\": {{Text4CopyCopyCopy.text}},\n\t\"text\": \"{{Input1Copy1Copy.text}}\",\n\t\"attachment_type\": {{Select1Copy1Copy.selectedOptionLabel}},\n\t\"file_base_64\": {{FilePicker1CopyCopy.files[0].data}},\n\t\"file_name\": {{FilePicker1CopyCopy.files[0].name}}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

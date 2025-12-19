@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    nc.id,\n    nc.employee_id,\n    e.name AS employee_name,\n    nc.objection_reason,\n    nc.objection_resolution,\n    nc.name,\n    nc.phone,\n    nc.created_at\nFROM bj.nonconverted nc\nLEFT JOIN bj.employees e \n       ON nc.employee_id = e.employee_id\nWHERE nc.converted = false",
+      "body": "SELECT \n    nc.id,\n    nc.employee_id,\n    e.name AS employee_name,\n    nc.objection_reason,\n    nc.objection_resolution,\n    nc.name,\n    nc.phone,\n    nc.created_at\nFROM bj.nonconverted nc\nLEFT JOIN bj.employees e \n       ON nc.employee_id = e.employee_id\nWHERE nc.converted = false\nORDER BY nc.created_at DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

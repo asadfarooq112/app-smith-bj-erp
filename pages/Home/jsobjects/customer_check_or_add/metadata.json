@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68b6eff59289a93060f5089f_9586c06e-8544-4894-80ab-6b3577648911",
+  "id": "Home_customer_check_or_add",
+  "unpublishedCollection": {
+    "name": "customer_check_or_add",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

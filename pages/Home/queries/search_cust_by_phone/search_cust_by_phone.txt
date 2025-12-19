@@ -1,0 +1,3 @@
+SELECT *
+FROM bj.customer
+WHERE phone ILIKE '{{this.params.value}}';

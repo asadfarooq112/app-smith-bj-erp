@@ -11,3 +11,4 @@ FROM bj.nonconverted nc
 LEFT JOIN bj.employees e 
        ON nc.employee_id = e.employee_id
 WHERE nc.converted = false
+ORDER BY nc.created_at DESC;
