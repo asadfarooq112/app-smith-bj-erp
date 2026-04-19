@@ -139,12 +139,8 @@ console.log (e)
 		
 		},
 
-	
-	async runSale(){
-
-		try {
-		await this.saleToDB ();
-		await storeValue('products', []);
+	resetFields () {
+			storeValue('products', []);
 			
 						resetWidget("input_cash");
 						resetWidget("input_card");
@@ -159,6 +155,14 @@ console.log (e)
 						resetWidget("input_bank_transfer");
 						resetWidget("Select1");
 						resetWidget("Select1Copy");
+		
+		navigateTo('Home');
+	},
+	
+	async runSale(){
+
+		try {
+		await this.saleToDB ();
 			
 			showAlert('Sale Created, Now you can Generate Invoice', 'success');
 			showModal(Modal2.name);
