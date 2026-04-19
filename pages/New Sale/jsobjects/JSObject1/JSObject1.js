@@ -159,7 +159,6 @@ console.log (e)
 
 		try {
 		await this.saleToDB ();
-		await this.invoiceDowload();
 		await storeValue('products', []);
 			
 						resetWidget("input_cash");
@@ -175,6 +174,8 @@ console.log (e)
 						resetWidget("input_bank_transfer");
 						resetWidget("Select1");
 						resetWidget("Select1Copy");
+			
+			showAlert('Sale Created, Now you can Generate Invoice'))
 
 		}
 
