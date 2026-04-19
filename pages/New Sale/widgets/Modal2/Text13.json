@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 35,
+  "bottomRow": 31,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 14,
   "needsErrorInfo": false,
-  "originalBottomRow": 35,
-  "originalTopRow": 29,
+  "originalBottomRow": 31,
+  "originalTopRow": 25,
   "overflow": "NONE",
   "parentColumnSpace": 10.09375,
   "parentId": "zi6jlkxx2l",
@@ -43,7 +43,7 @@
   "text": "Note: You have access to download the invoices from last two days.\n\nTo download just visit:    http://178.156.165.247:8080/tmp/invoice-INVOICENUMBER.pdf\n",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 29,
+  "topRow": 25,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

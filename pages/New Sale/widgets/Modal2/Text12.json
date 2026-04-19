@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 26,
+  "bottomRow": 22,
   "disableLink": false,
   "dynamicBindingPathList": [
     {
@@ -42,8 +42,8 @@
   "mobileRightColumn": 27,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
-  "originalTopRow": 9,
+  "originalBottomRow": 22,
+  "originalTopRow": 16,
   "overflow": "NONE",
   "parentColumnSpace": 6.9375,
   "parentId": "zi6jlkxx2l",
@@ -52,10 +52,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 53,
   "shouldTruncate": false,
-  "text": "<a href =\"http://178.156.165.247:8080{{invoice_buffer_get_and_email.data.url_path}}\" target=\"_blank\" rel=\"noopener noreferrer\"> http://178.156.165.247:8080{{invoice_buffer_get_and_email.data.url_path}} </a>",
+  "text": "Download Link: <a href =\"http://178.156.165.247:8080{{invoice_buffer_get_and_email.data.url_path}}\" target=\"_blank\" rel=\"noopener noreferrer\"> http://178.156.165.247:8080{{invoice_buffer_get_and_email.data.url_path}} </a>",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 22,
+  "topRow": 16,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
