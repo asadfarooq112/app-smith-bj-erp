@@ -11,7 +11,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -24,6 +28,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 11,
   "needsErrorInfo": false,
+  "onClick": "{{invoice_buffer_get_and_email.run().then(() => {\n  showAlert('Invoice Generated', 'success');\n}).catch(() => {\n  showAlert('Error Generating Invoice', 'error');\n});}}",
   "parentColumnSpace": 10.09375,
   "parentId": "zi6jlkxx2l",
   "parentRowSpace": 10,
