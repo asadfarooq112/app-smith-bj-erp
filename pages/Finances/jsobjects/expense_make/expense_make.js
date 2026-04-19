@@ -54,14 +54,8 @@ async expenseMake () {
 			await cash_tx_input.run({cash_tx_value: Number(amountINCopy.text)*-1, source: 'expense'})
 			};
 			
-		if (FilePicker1.files[0]) {
-		await upload_expense_image.run();
-			console.log('expense made');
-			
 			closeModal(Modal_expense.name);
 			showAlert(`Expense Made of Amount ${amountINCopy.text}`);
-
-		}
 
 			
 		}
