@@ -96,7 +96,7 @@
   "itemBackgroundColor": "#FFFFFF",
   "itemSpacing": 8,
   "key": "9pmylne7fn",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "listData": "{{non_converted.data}}",
   "mainCanvasId": "gqlcrph8ui",
   "mainContainerId": "impn236cdy",
