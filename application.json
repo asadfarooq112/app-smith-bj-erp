@@ -36,6 +36,14 @@
     {
       "id": "Production",
       "isDefault": false
+    },
+    {
+      "id": "Customer Feedback & Visits",
+      "isDefault": false
+    },
+    {
+      "id": "Employee Portal",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

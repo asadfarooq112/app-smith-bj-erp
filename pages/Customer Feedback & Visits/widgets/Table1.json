@@ -1,0 +1,488 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 124,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "cachedTableData": {},
+  "canFreezeColumn": true,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "created_at",
+    "rating_staff",
+    "rating_variety",
+    "rating_trust",
+    "rating_ambience",
+    "rating_value",
+    "rating_overall",
+    "feedback",
+    "id"
+  ],
+  "columnUpdatedAt": 1779472402898,
+  "columnWidthMap": {
+    "created_at": 133,
+    "rating_ambience": 107,
+    "rating_overall": 88,
+    "rating_staff": 68,
+    "rating_trust": 74,
+    "rating_value": 76,
+    "rating_variety": 87
+  },
+  "customIsLoading": false,
+  "customIsLoadingValue": "",
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "totalRecordsCount"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.rating_staff.computedValue"
+    },
+    {
+      "key": "primaryColumns.rating_variety.computedValue"
+    },
+    {
+      "key": "primaryColumns.rating_trust.computedValue"
+    },
+    {
+      "key": "primaryColumns.rating_ambience.computedValue"
+    },
+    {
+      "key": "primaryColumns.rating_value.computedValue"
+    },
+    {
+      "key": "primaryColumns.rating_overall.computedValue"
+    },
+    {
+      "key": "primaryColumns.feedback.computedValue"
+    },
+    {
+      "key": "primaryColumns.created_at.computedValue"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.rating_staff.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_variety.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_trust.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_ambience.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_value.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_overall.cellBackground"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.created_at.outputFormat"
+    },
+    {
+      "key": "primaryColumns.rating_staff.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_variety.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_trust.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_ambience.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_value.cellBackground"
+    },
+    {
+      "key": "primaryColumns.rating_overall.cellBackground"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onSort"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "endOfData": false,
+  "flexVerticalAlignment": "start",
+  "horizontalAlignment": "LEFT",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "v4ibhmnvsi",
+  "label": "Data",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 41,
+  "mobileLeftColumn": 20,
+  "mobileRightColumn": 54,
+  "mobileTopRow": 13,
+  "needsErrorInfo": false,
+  "onPageChange": "{{\n            Select_public_instore_feedback1.run();\n            Total_record_public_instore_feedback1.run()\n          }}",
+  "onSort": "{{\n            Select_public_instore_feedback1.run();\n            Total_record_public_instore_feedback1.run()\n          }}",
+  "parentColumnSpace": 16.6875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumnId": "id",
+  "primaryColumns": {
+    "created_at": {
+      "alias": "created_at",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "date",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"created_at\"])) : created_at })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "created_at",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Time",
+      "notation": "standard",
+      "originalId": "created_at",
+      "outputFormat": "H:mm A D MMMM",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "feedback": {
+      "alias": "feedback",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"feedback\"])) : feedback })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "feedback",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Feedback",
+      "notation": "standard",
+      "originalId": "feedback",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rating_ambience": {
+      "alias": "rating_ambience",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.rating_ambience == 1 ? \"#FEE2E2\" :\n  currentRow.rating_ambience == 2 ? \"#FFEDD5\" :\n  currentRow.rating_ambience == 3 ? \"#FEF9C3\" :\n  currentRow.rating_ambience == 4 ? \"#DCFCE7\" :\n  currentRow.rating_ambience == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n)) : \n  currentRow.rating_ambience == 1 ? \"#FEE2E2\" :\n  currentRow.rating_ambience == 2 ? \"#FFEDD5\" :\n  currentRow.rating_ambience == 3 ? \"#FEF9C3\" :\n  currentRow.rating_ambience == 4 ? \"#DCFCE7\" :\n  currentRow.rating_ambience == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rating_ambience\"])) : rating_ambience })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "rating_ambience",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Ambience",
+      "notation": "standard",
+      "originalId": "rating_ambience",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rating_overall": {
+      "alias": "rating_overall",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.rating_overall == 1 ? \"#FEE2E2\" :\n  currentRow.rating_overall == 2 ? \"#FFEDD5\" :\n  currentRow.rating_overall == 3 ? \"#FEF9C3\" :\n  currentRow.rating_overall == 4 ? \"#DCFCE7\" :\n  currentRow.rating_overall == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n)) : \n  currentRow.rating_overall == 1 ? \"#FEE2E2\" :\n  currentRow.rating_overall == 2 ? \"#FFEDD5\" :\n  currentRow.rating_overall == 3 ? \"#FEF9C3\" :\n  currentRow.rating_overall == 4 ? \"#DCFCE7\" :\n  currentRow.rating_overall == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rating_overall\"])) : rating_overall })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "rating_overall",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Overall",
+      "notation": "standard",
+      "originalId": "rating_overall",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rating_staff": {
+      "alias": "rating_staff",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.rating_staff == 1 ? \"#FEE2E2\" :\n  currentRow.rating_staff == 2 ? \"#FFEDD5\" :\n  currentRow.rating_staff == 3 ? \"#FEF9C3\" :\n  currentRow.rating_staff == 4 ? \"#DCFCE7\" :\n  currentRow.rating_staff == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n)) : \n  currentRow.rating_staff == 1 ? \"#FEE2E2\" :\n  currentRow.rating_staff == 2 ? \"#FFEDD5\" :\n  currentRow.rating_staff == 3 ? \"#FEF9C3\" :\n  currentRow.rating_staff == 4 ? \"#DCFCE7\" :\n  currentRow.rating_staff == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rating_staff\"])) : rating_staff })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "rating_staff",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Staff",
+      "notation": "standard",
+      "originalId": "rating_staff",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rating_trust": {
+      "alias": "rating_trust",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.rating_trust == 1 ? \"#FEE2E2\" :\n  currentRow.rating_trust == 2 ? \"#FFEDD5\" :\n  currentRow.rating_trust == 3 ? \"#FEF9C3\" :\n  currentRow.rating_trust == 4 ? \"#DCFCE7\" :\n  currentRow.rating_trust == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n)) : \n  currentRow.rating_trust == 1 ? \"#FEE2E2\" :\n  currentRow.rating_trust == 2 ? \"#FFEDD5\" :\n  currentRow.rating_trust == 3 ? \"#FEF9C3\" :\n  currentRow.rating_trust == 4 ? \"#DCFCE7\" :\n  currentRow.rating_trust == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rating_trust\"])) : rating_trust })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "rating_trust",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Trust",
+      "notation": "standard",
+      "originalId": "rating_trust",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rating_value": {
+      "alias": "rating_value",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.rating_value == 1 ? \"#FEE2E2\" :\n  currentRow.rating_value == 2 ? \"#FFEDD5\" :\n  currentRow.rating_value == 3 ? \"#FEF9C3\" :\n  currentRow.rating_value == 4 ? \"#DCFCE7\" :\n  currentRow.rating_value == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n)) : \n  currentRow.rating_value == 1 ? \"#FEE2E2\" :\n  currentRow.rating_value == 2 ? \"#FFEDD5\" :\n  currentRow.rating_value == 3 ? \"#FEF9C3\" :\n  currentRow.rating_value == 4 ? \"#DCFCE7\" :\n  currentRow.rating_value == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rating_value\"])) : rating_value })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "rating_value",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Value",
+      "notation": "standard",
+      "originalId": "rating_value",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rating_variety": {
+      "alias": "rating_variety",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.rating_variety == 1 ? \"#FEE2E2\" :\n  currentRow.rating_variety == 2 ? \"#FFEDD5\" :\n  currentRow.rating_variety == 3 ? \"#FEF9C3\" :\n  currentRow.rating_variety == 4 ? \"#DCFCE7\" :\n  currentRow.rating_variety == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n)) : \n  currentRow.rating_variety == 1 ? \"#FEE2E2\" :\n  currentRow.rating_variety == 2 ? \"#FFEDD5\" :\n  currentRow.rating_variety == 3 ? \"#FEF9C3\" :\n  currentRow.rating_variety == 4 ? \"#DCFCE7\" :\n  currentRow.rating_variety == 5 ? \"#BBF7D0\" :\n  \"transparent\"\n })()}}",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rating_variety\"])) : currentRow[\"rating_variety\"] })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "rating_variety",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Variety",
+      "notation": "standard",
+      "originalId": "rating_variety",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "tableData": "{{Select_public_instore_feedback1.data}}",
+  "textSize": "0.875rem",
+  "topRow": 4,
+  "totalRecordsCount": "{{Total_record_public_instore_feedback1.data[0].count}}",
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "89mhs3il9k",
+  "widgetName": "Table1"
+}

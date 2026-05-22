@@ -1,0 +1,9 @@
+SELECT
+  salesperson_name AS employee_name,
+  COUNT(*) AS non_converted_count
+FROM public.visitor_report
+WHERE converted = false
+  AND created_at >= date_trunc('month', now() AT TIME ZONE 'Asia/Karachi')
+  AND created_at < date_trunc('month', now() AT TIME ZONE 'Asia/Karachi') + interval '1 month'
+GROUP BY salesperson_name
+ORDER BY non_converted_count DESC;

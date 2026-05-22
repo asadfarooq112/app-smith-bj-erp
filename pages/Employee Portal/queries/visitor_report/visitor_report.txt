@@ -1,0 +1,21 @@
+SELECT
+  created_at,
+  salesperson_name,
+  customer_name,
+  customer_type,
+  visitor_composition,
+  decision_maker_gender,
+  decision_maker_age,
+  visit_duration,
+  buying_for,
+  heard_about_us,
+  converted,
+  objections_questions,
+  driving_factor,
+  reason_not_buying,
+  looking_for,
+  budget_range,
+  likelihood_to_return,
+  salesperson_notes
+FROM public.visitor_report
+ORDER BY created_at DESC NULLS LAST;

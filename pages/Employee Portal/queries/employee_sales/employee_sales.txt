@@ -1,0 +1,24 @@
+SELECT
+  e.name AS employee_name,
+  COUNT(s.sale_id) AS total_number_of_sales,
+  ROUND(COALESCE(SUM(s.total_charged), 0))::integer AS total_sales,
+  ROUND(
+    COALESCE(
+      SUM(
+        CASE
+          WHEN s.total_charged > 1000000 THEN s.total_charged * 0.015
+          WHEN s.total_charged >= 500000 AND s.total_charged < 1000000 THEN s.total_charged * 0.01
+          WHEN s.total_charged >= 250000 AND s.total_charged < 500000 THEN s.total_charged * 0.005
+          ELSE 0
+        END
+      ),
+      0
+    )
+  )::integer AS commission
+FROM bj.sales s
+JOIN bj.employees e
+  ON s.employee_id = e.employee_id
+WHERE s.date_added >= date_trunc('month', now() AT TIME ZONE 'Asia/Karachi')
+  AND s.date_added < date_trunc('month', now() AT TIME ZONE 'Asia/Karachi') + interval '1 month'
+GROUP BY e.employee_id, e.name
+ORDER BY total_sales DESC;

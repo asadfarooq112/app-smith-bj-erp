@@ -1,0 +1,3 @@
+SELECT *
+FROM instore_feedback
+ORDER BY created_at DESC;
