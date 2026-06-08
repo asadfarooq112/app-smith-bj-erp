@@ -37,6 +37,7 @@
     "converted",
     "salesperson_name",
     "customer_name",
+    "phone",
     "customer_type",
     "visitor_composition",
     "decision_maker_gender",
@@ -52,14 +53,15 @@
     "likelihood_to_return",
     "salesperson_notes"
   ],
-  "columnUpdatedAt": 1779475604972,
+  "columnUpdatedAt": 1780938106730,
   "columnWidthMap": {
     "converted": 60,
     "created_at": 132,
-    "customer_name": 141,
+    "customer_name": 139,
     "customer_type": 82,
     "heard_about_us": 138,
     "objections_questions": 480,
+    "phone": 110,
     "reason_not_buying": 496,
     "salesperson_name": 108,
     "visit_duration": 97
@@ -195,6 +197,12 @@
     },
     {
       "key": "primaryColumns.salesperson_notes.cellBackground"
+    },
+    {
+      "key": "primaryColumns.phone.computedValue"
+    },
+    {
+      "key": "primaryColumns.phone.cellBackground"
     }
   ],
   "dynamicPropertyPathList": [
@@ -206,6 +214,9 @@
     },
     {
       "key": "cellBackground"
+    },
+    {
+      "key": "primaryColumns.phone.cellBackground"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -671,6 +682,40 @@
       "label": "objections_questions",
       "notation": "standard",
       "originalId": "objections_questions",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "phone": {
+      "alias": "phone",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (\n  currentRow.converted === false || currentRow.converted === \"false\"\n    ? \"#FEE2E2\"\n    : currentRow.converted === true || currentRow.converted === \"true\"\n      ? \"#DCFCE7\"\n      : \"transparent\"\n)) : \n  currentRow.converted === false || currentRow.converted === \"false\"\n    ? \"#FEE2E2\"\n    : currentRow.converted === true || currentRow.converted === \"true\"\n      ? \"#DCFCE7\"\n      : \"transparent\"\n })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Table1.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"phone\"])) : phone })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "phone",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Phone",
+      "notation": "standard",
+      "originalId": "phone",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

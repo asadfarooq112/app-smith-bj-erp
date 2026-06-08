@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68b6eff59289a93060f5089f_9ee00224-0f0f-4415-9603-6f35743c2642",
-  "id": "Home_non_converted",
+  "gitSyncId": "68b6eff59289a93060f5089f_d38311e3-556f-42ac-ae59-5675892eb4fa",
+  "id": "Home_customer_add",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    nc.id,\n    nc.employee_id,\n    e.name AS employee_name,\n    nc.objection_reason,\n    nc.objection_resolution,\n    nc.name,\n    nc.phone,\n    nc.created_at\nFROM bj.nonconverted nc\nLEFT JOIN bj.employees e \n       ON nc.employee_id = e.employee_id\nWHERE nc.converted = false\nORDER BY nc.created_at DESC;",
+      "body": "INSERT INTO bj.customer (name, phone, address)\nVALUES (\n{{input_cust_name.text}},\n{{input_cust_phone.text}},\n{{input_cust_address.text}}\n)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,12 @@
       "name": "BJ Neon",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
-    "name": "non_converted",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "customer_add",
     "pageId": "Home",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

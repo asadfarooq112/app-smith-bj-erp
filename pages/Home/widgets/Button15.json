@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 213,
+  "bottomRow": 168,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -44,7 +44,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 17,
   "text": "Finances (limited access)",
-  "topRow": 208,
+  "topRow": 163,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "eiqjrld1pf",
