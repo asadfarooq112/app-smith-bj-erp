@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM bj.financial_transactions\nORDER BY date_added DESC",
+      "body": "SELECT * FROM bj.financial_transactions\nWHERE date_added >= ((CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Karachi')::date AT TIME ZONE 'Asia/Karachi')\n  AND date_added <  ((CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Karachi')::date + INTERVAL '1 day') AT TIME ZONE 'Asia/Karachi'\nORDER BY date_added DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

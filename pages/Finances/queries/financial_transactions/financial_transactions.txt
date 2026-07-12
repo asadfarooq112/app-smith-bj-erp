@@ -1,2 +1,4 @@
 SELECT * FROM bj.financial_transactions
-ORDER BY date_added DESC
+WHERE date_added >= ((CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Karachi')::date AT TIME ZONE 'Asia/Karachi')
+  AND date_added <  ((CURRENT_TIMESTAMP AT TIME ZONE 'Asia/Karachi')::date + INTERVAL '1 day') AT TIME ZONE 'Asia/Karachi'
+ORDER BY date_added DESC;

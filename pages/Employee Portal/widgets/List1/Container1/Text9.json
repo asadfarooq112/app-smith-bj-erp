@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 40,
   "shouldTruncate": false,
-  "text": "Amount: <b> {{currentItem.total_sales}} </b>",
+  "text": "Amount: <b> {{currentItem.total_charged}} </b>",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,

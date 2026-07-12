@@ -1,24 +1,78 @@
+-- Belgian Jewels: current-month commission leaderboard on NET sales
+-- Net sale = sales.total_charged minus the same-customer, same-Karachi-day
+-- exchange credit (bj.return_exchange rows with type = 'exchange').
+--
+-- Design decisions (as agreed):
+--   * Exchange credits are pre-aggregated per (customer, local day) so a
+--     two-piece trade-in can never duplicate the sale row.
+--   * The credit attaches to exactly ONE sale per customer/day (the largest),
+--     so a rare second sale that day is never double-reduced.
+--   * Negative net (exchange-down) earns 0 commission, no clawback.
+--   * Tiers evaluated PER SALE on net, gap-free:
+--       net >= 1,000,000 -> 1.5% | >= 500,000 -> 1.0% | >= 250,000 -> 0.5%
+--   * Month boundary pinned to Asia/Karachi regardless of session TimeZone.
+--   * return_exchange.date_added is a naive timestamp: interpreted as UTC,
+--     then shifted to Karachi to get the local calendar day.
+
+WITH exchange_credits AS (
+    SELECT
+        re.customer_id,
+        ((re.date_added AT TIME ZONE 'UTC') AT TIME ZONE 'Asia/Karachi')::date AS local_date,
+        SUM(re.amount_refunded) AS exchange_credit
+    FROM bj.return_exchange re
+    WHERE re.type = 'exchange'
+    GROUP BY re.customer_id,
+             ((re.date_added AT TIME ZONE 'UTC') AT TIME ZONE 'Asia/Karachi')::date
+),
+
+sales_in_month AS (
+    SELECT
+        s.sale_id,
+        s.employee_id,
+        s.customer_id,
+        s.total_charged,
+        (s.date_added AT TIME ZONE 'Asia/Karachi')::date AS local_date,
+        ROW_NUMBER() OVER (
+            PARTITION BY s.customer_id,
+                         (s.date_added AT TIME ZONE 'Asia/Karachi')::date
+            ORDER BY s.total_charged DESC NULLS LAST, s.date_added, s.sale_id
+        ) AS rn
+    FROM bj.sales s
+    WHERE s.date_added >= date_trunc('month', now() AT TIME ZONE 'Asia/Karachi') AT TIME ZONE 'Asia/Karachi'
+      AND s.date_added <  (date_trunc('month', now() AT TIME ZONE 'Asia/Karachi') + interval '1 month') AT TIME ZONE 'Asia/Karachi'
+),
+
+sales_net AS (
+    SELECT
+        sm.sale_id,
+        sm.employee_id,
+        COALESCE(sm.total_charged, 0)       AS total_charged,
+        COALESCE(ec.exchange_credit, 0)     AS exchange_credit,
+        COALESCE(sm.total_charged, 0)
+          - COALESCE(ec.exchange_credit, 0) AS net_sale
+    FROM sales_in_month sm
+    LEFT JOIN exchange_credits ec
+           ON sm.rn = 1                      -- credit lands on one sale only
+          AND ec.customer_id = sm.customer_id
+          AND ec.local_date  = sm.local_date
+)
+
 SELECT
-  e.name AS employee_name,
-  COUNT(s.sale_id) AS total_number_of_sales,
-  ROUND(COALESCE(SUM(s.total_charged), 0))::integer AS total_sales,
-  ROUND(
-    COALESCE(
-      SUM(
+    e.name                                  AS employee_name,
+    COUNT(sn.sale_id)                       AS total_number_of_sales,
+    ROUND(SUM(sn.total_charged))::integer   AS total_charged,
+    ROUND(SUM(sn.exchange_credit))::integer AS exchange_credits,
+    ROUND(SUM(sn.net_sale))::integer        AS net_sales,
+    ROUND(SUM(
         CASE
-          WHEN s.total_charged > 1000000 THEN s.total_charged * 0.015
-          WHEN s.total_charged >= 500000 AND s.total_charged < 1000000 THEN s.total_charged * 0.01
-          WHEN s.total_charged >= 250000 AND s.total_charged < 500000 THEN s.total_charged * 0.005
-          ELSE 0
+            WHEN sn.net_sale >= 1000000 THEN sn.net_sale * 0.015
+            WHEN sn.net_sale >= 500000  THEN sn.net_sale * 0.01
+            WHEN sn.net_sale >= 250000  THEN sn.net_sale * 0.005
+            ELSE 0
         END
-      ),
-      0
-    )
-  )::integer AS commission
-FROM bj.sales s
-JOIN bj.employees e
-  ON s.employee_id = e.employee_id
-WHERE s.date_added >= date_trunc('month', now() AT TIME ZONE 'Asia/Karachi')
-  AND s.date_added < date_trunc('month', now() AT TIME ZONE 'Asia/Karachi') + interval '1 month'
+    ))::integer                             AS commission
+FROM sales_net sn
+JOIN bj.employees e ON e.employee_id = sn.employee_id
 GROUP BY e.employee_id, e.name
-ORDER BY total_sales DESC;
+ORDER BY net_sales DESC;
+
