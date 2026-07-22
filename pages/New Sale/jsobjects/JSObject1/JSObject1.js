@@ -180,21 +180,18 @@ console.log (e)
 
 				const payloadString = JSON.stringify(errorInfo);
 
-					await Promise.all([
+
 						
-				event_insert.run({
+				await event_insert.run({
 					event: 'error', 
 					event_from: 'appsmith frontend new sale page', 
 					event_to: '-', 
 					actor: Select1.selectedOptionValue,
 					payload: payloadString
 
-				}),
+				})
 					
-					whatsapp_error.run({receiver: '03244811332', text: payloadString})
-					
-					
-				])
+		
 
 
 				throw(e);
