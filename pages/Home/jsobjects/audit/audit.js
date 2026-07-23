@@ -14,7 +14,7 @@ export default {
 		
 		await Api4.run();
 		
-		showAlert('Inventory Audit Sheet Emailed. Print, Fill and Upload here.', 'success');
+		showAlert('Inventory Audit Sheet Emailed', 'success');
 		resetWidget("Select_EmployeeCopy1");
 
 		}
